@@ -4,14 +4,51 @@ body{
     margin: 0;
     height: 10000px;
     background-color: black;
+    
 }
-p{
+a{
+    all: unset;
+}
+.Maincontainer{
+    width: 80% !important;
+    margin: auto;
+}
+html{
+    scroll-behavior: smooth;
+}
+p , h4 , h1 {
     padding: 0;
     margin: 0;
 }
-h4{
-    padding: 0;
-    margin: 0;
+.right_bar{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    position: fixed;
+    top: 25%;
+    bottom: 25%;
+    left: 0px;
+    width: 5%;
+    min-width: 45px;
+    background-color: white;
+    border-radius: 0px 10px 10px 0px;
+    padding-top:12px ;
+    padding-bottom:14px ;
+
+}
+.right_bar a div{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+}
+.right_bar a div:hover{
+    background-color: #B84ACA;
+    cursor: pointer;
 }
 header{
     height: 30px;
@@ -74,6 +111,10 @@ header p:active{
     top: 0px;
     left: -100px;
 }
+.circle3{
+    top: 170vh;
+    left: 100px;
+}
 .section{
     height: 100vh;
 }
@@ -81,6 +122,7 @@ header p:active{
     color: white;
     padding-left: 16%;
 }
+
 .sec1C{
     width: 80%;
 }
@@ -119,23 +161,64 @@ header p:active{
 
 }
 
-.line{
-    color:wheat;
-}
-
 .sectionSep{
 
-    filter: blur(10px);
+    filter: blur(4px);
     width: 80%;
     margin: auto;
 }
+
+
+.section2{
+    color: white;
+}
+.sec2C{
+    width: 80%;
+    margin-inline: auto;
+}
+.subeducation{
+    padding-bottom: 40px;
+}
+.education{
+    padding-top:50px ;
+    font-size: 58px;
+    text-align: center;
+    padding-bottom: 130px;
+    color: #B84ACA;
+}
+.edc1{
+    font-size: 27px;
+}
+.edc1-2{
+    text-align: right;
+    font-size: 22px;
+}
+.edc-img{
+    display: flex;
+    align-items: center;
+}
+.edcimg{
+    margin-right: 30px;
+    height: 50px;
+    width: 50px;
+    background-color: #B84ACA;
+    border-radius: 50%;
+    padding: 2px;
+}
 /* change the header  */
 @media screen and (max-width : 747px) {
-    
+    header {
+        display: none;
+        visibility: hidden;
+      }
+
 }
 
 @media screen and (max-width: 832px) {
     /* CSS rules for screens with a maximum width of 768px */
+    .education{
+        font-size: 40px;
+    }
     body {
         overflow-x: hidden;
       }
