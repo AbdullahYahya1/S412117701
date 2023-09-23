@@ -9,12 +9,12 @@
 </head>
 <body>
  
-    <!-- <header>
+    <header>
         <div class="container">
             <h4>
                 Abdullah
             </h4>
-            <p class="selected">
+            <p >
                 About Me 
             </p>
             <p>
@@ -36,7 +36,8 @@
                 Contact Me 
             </p>
         </div>
-    </header> -->
+    </header>
+
         <img src="img1.png" class="img1">
         <div class="circle circle1"></div>
         <div class="circle circle2"></div>
