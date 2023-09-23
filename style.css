@@ -1,0 +1,175 @@
+
+body{
+    padding: 0;
+    margin: 0;
+    height: 10000px;
+    background-color: black;
+}
+p{
+    padding: 0;
+    margin: 0;
+}
+h4{
+    padding: 0;
+    margin: 0;
+}
+header{
+    height: 30px;
+    border-bottom: 1px solid white;
+}
+.container{
+    display:flex;
+    justify-content: space-around;
+    margin-top: 15px;
+}
+header p , header h4{
+    color: white;
+    padding-bottom: 5px;
+    cursor: pointer;
+}
+header p{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 14px;
+    transition:0.5s;
+}
+header p:hover{
+    color: #B84ACA;
+}
+header p:active{
+    opacity:0.5;
+
+}
+.selected{
+    color: #B84ACA;
+    border-bottom: 1px solid #B84ACA ;
+    font-weight: bolder;
+    font-size: 15px;
+}
+.img1{
+    width:150px;
+    right: 0px;
+    top: 100px;
+    z-index: 2;
+    position:absolute;
+
+}
+
+.circle {
+    position: absolute;
+    width: 350px;
+    height: 350px;
+    transform: translateX(-50%);
+    border-radius: 100%; /* Makes the element a circle */
+    background-color: #B84ACA;
+    filter: blur(100px);
+    z-index: -2;
+
+}
+.circle1{
+    top: 450px;
+    right: 0px;
+}
+.circle2{
+    top: 0px;
+    left: -160px;
+}
+.section{
+    height: 100vh;
+}
+.section1{
+    color: white;
+    padding-left: 16%;
+}
+.sec1C{
+    width: 80%;
+}
+
+.name{
+    font-size: 58px;
+    padding-top: 10vh;
+    padding-bottom: 13vh;
+}
+.job{
+    font-size: 40px;
+    color: #c461d3;
+    padding-bottom: 2vw;
+
+}
+.interest{
+    font-size: 30px;
+    padding-bottom: 10vw;
+
+}
+
+.buttons_div button{
+    margin-right: 10px;
+    padding: 10px 20px ;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+}
+.buttons_div button:first-child{
+    background-color: #db74eb;
+
+}
+.buttons_div button:last-child{
+    background-color: #bc48ce;
+
+}
+
+.line{
+    color:wheat;
+}
+@media screen and (max-width: 832px) {
+    /* CSS rules for screens with a maximum width of 768px */
+    body {
+        overflow-x: hidden;
+      }
+    .section1{
+        width: 100%;
+        padding-left:0;
+    }
+    .sec1C{
+        padding: 0;
+        width: 80%;
+        padding:0;
+        margin-left: 20px;
+
+    }
+    .section{
+        width: 100%;
+ 
+    }
+
+    .circle1{
+        top: 450px;
+        right: 1px;
+        width: 40px;
+
+    }
+    .circle2{
+        top: 0px;
+        left: -100px;
+    }
+    .img1{
+        right: 1px;
+        width: 100px;
+        overflow: hidden;
+    }
+    .name{
+        padding-top: 90px;
+        font-size: 30px;
+    }
+    .job{
+        font-size: 25px;
+    }
+    .interest{
+        font-size: 20px;
+
+    }
+    .buttons_div button{
+        padding: 10px 5px;
+        font-size: 14px;
+    }
+  }
