@@ -4,19 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="header.css">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
-        <div class='right_bar'>
-            <a href="#">
+        <div class='left_bar'>
+            <a href="#" id='education_logo_right'>
                 <div>
                         <i class="fa-solid fa-house fa-xl"></i>          
                 </div>
             </a>
             <a href='#section2'>
-                <div>
+                <div class='section2img'>
                     <i class="fa-solid fa-graduation-cap fa-xl"></i>
                 </div>
             </a>
@@ -50,20 +49,24 @@
                 <h4>
                     Abdullah
                 </h4>
-                <p >
-                    About Me 
-                </p>
+                <a href="">
+                    <p class="currentPage">
+                        About Me 
+                    </p>
+                </a>
                 <p >
                     Experience
                 </p>
-                <a href='#section2'>
+                <a href='view/EDUCATION'>
                 <p >
                     Education
                 </p>
                 </a>
-                <p>
-                    Certfifactions
-                </p>
+                <a href="view/CERTIFICATIONS">
+                    <p>
+                        Certfifactions
+                    </p>
+                </a>
                 <p>
                     Projects
                 </p>
@@ -103,40 +106,16 @@
         </div>
 
 
-        <div class="sectionSep">
+        <div class="sectionSep sectionSep1">
                 <hr>
         </div>
 
-        <div class="section section2" id='section2'>
-            <div class="sec2C">
-                <h1 class='education'>
-                EDUCATION
-                </h1>
-                <div class="subeducation">
-                    <div class='edc-img'>
-                        <img class='edcimg' src="edcimg" alt="">
-                        <p class="edc1">Bachelor Computer-Science</p>
-                    </div>
-                    <p class="edc1-2">Qassim University</p>
-                    <p class="edc1-2">2020-Present</p>
-                </div>
-                <div class="subeducation">
-                    <div class='edc-img'>
-                        <img class='edcimg' src="edcimg" alt="">
-                        <p class="edc1">Bachelor Computer-Science</p>
-                    </div>
-                    <p class="edc1-2">Qassim University</p>
-                    <p class="edc1-2">2020-Present</p>
-                </div>
-            </div>
-            
-        </div>
 
-        <div class="sectionSep">
-                <hr>
-        </div>
-        <script src="app.js"></script>
+
     </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="app.js"></script>
 
 </body>
 </html>

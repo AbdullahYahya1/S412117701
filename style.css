@@ -1,10 +1,9 @@
 
 body{
     padding: 0;
+    padding-top: 50px;
     margin: 0;
-    height: 10000px;
     background-color: black;
-    
 }
 a{
     all: unset;
@@ -13,6 +12,12 @@ a{
     width: 80% !important;
     margin: auto;
 }
+.currentPage{
+    color: #B84ACA;
+    border-bottom: 1px solid #B84ACA ;
+    font-weight: bolder;
+    font-size: 15px;
+}
 html{
     scroll-behavior: smooth;
 }
@@ -20,7 +25,7 @@ p , h4 , h1 {
     padding: 0;
     margin: 0;
 }
-.right_bar{
+.left_bar{
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -28,7 +33,7 @@ p , h4 , h1 {
     position: fixed;
     top: 25%;
     bottom: 25%;
-    left: 0px;
+    left: -100px;
     width: 5%;
     min-width: 45px;
     background-color: white;
@@ -37,7 +42,7 @@ p , h4 , h1 {
     padding-bottom:14px ;
 
 }
-.right_bar a div{
+.left_bar a div{
     display: flex;
     justify-content: center;
     text-align: center;
@@ -46,13 +51,18 @@ p , h4 , h1 {
     height: 40px;
     border-radius: 100%;
 }
-.right_bar a div:hover{
+.left_bar a div:hover{
     background-color: #B84ACA;
     cursor: pointer;
 }
 header{
-    height: 30px;
-    border-bottom: 1px solid white;
+    position: fixed;
+    width: 100%;
+    top: 0px;
+    left: 0px;
+    height: 50px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.27);
+    border-width:0.1px;
 }
 .container{
     display:flex;
@@ -76,6 +86,7 @@ header p:hover{
     font-weight: bolder;
     font-size: 15px;
 }
+
 header p:active{
     opacity:0.5;
 
@@ -99,16 +110,17 @@ header p:active{
     background-color: #B84ACA;
     filter: blur(100px);
     z-index: -2;
+    opacity: 0;
     background-size: 50% 200%; /* Adjust this value to control the cut angle */
 
 }
 
 .circle1{
-    top: 450px;
+    top: 10vh;
     right: -150px;
 }
 .circle2{
-    top: 0px;
+    top: 20vh;
     left: -100px;
 }
 .circle3{
@@ -128,6 +140,7 @@ header p:active{
 }
 
 .name{
+    opacity: 0;
     font-size: 58px;
     padding-top: 10vh;
     padding-bottom: 13vh;
@@ -162,49 +175,13 @@ header p:active{
 }
 
 .sectionSep{
-
     filter: blur(4px);
     width: 80%;
     margin: auto;
 }
 
 
-.section2{
-    color: white;
-}
-.sec2C{
-    width: 80%;
-    margin-inline: auto;
-}
-.subeducation{
-    padding-bottom: 40px;
-}
-.education{
-    padding-top:50px ;
-    font-size: 58px;
-    text-align: center;
-    padding-bottom: 130px;
-    color: #B84ACA;
-}
-.edc1{
-    font-size: 27px;
-}
-.edc1-2{
-    text-align: right;
-    font-size: 22px;
-}
-.edc-img{
-    display: flex;
-    align-items: center;
-}
-.edcimg{
-    margin-right: 30px;
-    height: 50px;
-    width: 50px;
-    background-color: #B84ACA;
-    border-radius: 50%;
-    padding: 2px;
-}
+
 /* change the header  */
 @media screen and (max-width : 747px) {
     header {
@@ -216,9 +193,7 @@ header p:active{
 
 @media screen and (max-width: 832px) {
     /* CSS rules for screens with a maximum width of 768px */
-    .education{
-        font-size: 40px;
-    }
+
     body {
         overflow-x: hidden;
       }
