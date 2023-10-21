@@ -21,9 +21,8 @@
         }else{
             $_SESSION = array();
             session_destroy();
-            header("Location: ../view/login"); 
+            header("Location: ../view/login?stat=1"); 
         }
-
     }else{
         echo'dbModel is not connected ';
     }

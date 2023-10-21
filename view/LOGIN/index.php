@@ -24,13 +24,9 @@
           <a href="/s412117701p/view/register">
             <p class="register">register</p>
           </a>
-
           <?php
-          session_start();
-          if (isset($_SESSION['name'])){
-            echo $_SESSION['name'];}
-          else{
-            echo 'not found';
+          if (isset($_GET['stat'])){
+            echo 'somthing went wrong try again or register';
           }
           ?>
         </div>
