@@ -50,3 +50,21 @@ function handleScrollTo100vhPlus30px() {
 //     backgroundColor:'white', 
 
 // })
+
+
+
+
+// var elements = document.querySelectorAll('.OlHm2b');
+// var l = []
+    
+// // Iterate through the NodeList using a for loop
+// for (var i = 0; i < elements.length; i++) {
+//     // Access each element using elements[i]
+//     var currentElement = elements[i];
+//     l.push(currentElement.dataset.hovercardId)
+//     // Display the content of the current element
+//     console.log(currentElement.dataset.hovercardId);
+
+//     // If you want to display HTML content, use innerHTML instead
+//     // console.log(currentElement.innerHTML);
+// }
