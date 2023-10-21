@@ -18,30 +18,21 @@ function handleScrollTo100vhPlus30px() {
 
   }
   
-window.addEventListener("scroll", handleScrollTo100vhPlus30px);
-  
-gsap.registerPlugin(ScrollTrigger);
-gsap.to('.name',{
-    opacity:1, 
-    duration:5,
-    scrollTrigger:'.name'
-})
-gsap.registerPlugin(ScrollTrigger);
-gsap.to('.education',{
-    opacity:1, 
-    duration:3,
-    scrollTrigger:{
-        trigger:'.education',
-        start:'top 100%',
-        end:'top 40%',
-        toggleActions:"restart none none reset", 
-    }
-})
+  document.addEventListener('DOMContentLoaded' , function(){
+    setTimeout(() => {
+        gsap.to('.name',{
+            opacity:1, 
+            duration:5,
+        })
+    
+        
+        gsap.to('.circle',{
+            opacity:1, 
+            duration:10,
+        })
+      }, 250);
 
-gsap.to('.circle',{
-    opacity:1, 
-    duration:10,
-})
+  })
 
 
 // gsap.to('.section2img',{

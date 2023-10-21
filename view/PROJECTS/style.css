@@ -1,0 +1,43 @@
+.section2 {
+  color: white;
+}
+.sec2C {
+  width: 80%;
+  margin-inline: auto;
+}
+.subeducation {
+  padding-bottom: 40px;
+}
+.education {
+  padding-top: 50px;
+  font-size: 58px;
+  text-align: center;
+  padding-bottom: 130px;
+  color: #b84aca;
+  opacity: 0;
+}
+@media screen and (max-width: 832px) {
+  /* CSS rules for screens with a maximum width of 768px */
+  .education {
+    font-size: 40px;
+  }
+}
+.edc1 {
+  font-size: 27px;
+}
+.edc1-2 {
+  text-align: right;
+  font-size: 22px;
+}
+.edc-img {
+  display: flex;
+  align-items: center;
+}
+.edcimg {
+  margin-right: 30px;
+  height: 50px;
+  width: 50px;
+  background-color: #b84aca;
+  border-radius: 50%;
+  padding: 2px;
+}

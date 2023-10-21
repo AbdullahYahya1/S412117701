@@ -1,4 +1,55 @@
 svg{
-width:50px;
-height: 50px;
+width:55px;
+height:55px;
+}
+.CERTI_title{
+    font-size: 58px;
+    text-align: center;
+    color: #B84ACA;
+    padding-top: 50px;
+    padding-bottom:75px;
+    
+}
+.CERTIF_Container{
+    color: white;
+}
+.CERTIF_Container_Flex{
+    display: flex;
+    background-color: #f8cbff09;
+    padding: 8px;
+    border-radius: 10px;
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.233);
+height: 200px;
+
+}
+
+.CERTIFelements{
+margin-inline:50px auto;
+display: grid;
+grid-template-columns:1fr 1fr;
+grid-gap: 30px; /* Adds a 10px gap between rows and columns */
+}
+.textC{
+    margin-left: 20px;
+    padding-top: 10px;
+    font-size: 27px;
+    flex: 1;
+    text-align: left;
+}
+.textC ul{
+    margin-top: 20px;
+    padding-left: 20px;
+}
+.textC ul li{
+    font-size: 22px;
+    margin: 0;
+    padding: 0;
+}
+.circle4{
+    z-index: -10;
+    width: 700px;
+    opacity: 0.5;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-20%);
 }
