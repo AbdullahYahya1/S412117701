@@ -112,9 +112,12 @@ header p:active{
     filter: blur(100px);
     z-index: -2;
     opacity: 0;
-    background-size: 50% 200%; /* Adjust this value to control the cut angle */
+    color: rgb(0, 100%, 50%);
 
+    background-size: 50% 200%; /* Adjust this value to control the cut angle */
+    transition:all .5s linear;
 }
+
 
 .circle1{
     top: 10vh;
@@ -180,7 +183,24 @@ header p:active{
     width: 80%;
     margin: auto;
 }
+#light {
+    position: fixed;
+    opacity: 0;
+    margin: 0;
+    padding: 0;
+    width: 20px;
+    height: 20px;
+    background-color: transparent;
+    border-radius: 50%;
+    pointer-events: none;
+    transform-origin: 50% 50%;
+    box-shadow: 0 0 10px 5px #db74eb;
+    transition: transform 0.1s ease-out;
+    transform: scale(1) translate(-50%, -50%);
+    filter: blur(10px);
+    background-size: 50% 200%; /* Adjust this value to control the cut angle */
 
+}
 
 
 /* change the header  */

@@ -16,10 +16,10 @@
           LOGIN
         </h1>
         <div class="section" >
-          <form action="/s412117701p/controlle/login.php" method="post">
+          <form action="/s412117701p/controlle/controlle.php" method="post">
             <input type="text" name="PHP_AUTH_USER" placeholder="name">
             <input type="password" name="PHP_AUTH_PW" placeholder="password">
-            <input type="submit" value="login">
+            <input type="submit" name='login' value="login">
           </form>
           <a href="/s412117701p/view/register">
             <p class="register">register</p>
