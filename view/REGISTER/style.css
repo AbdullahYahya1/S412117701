@@ -1,0 +1,13 @@
+.container{
+    flex-direction: row;
+    align-items: end;
+    justify-content: flex-end;
+    margin-right: 30px;
+  }
+  .section{
+    background-color: #b84aca;
+  }
+  .register{
+    color: white;
+    border: 1px solid black;
+  }
