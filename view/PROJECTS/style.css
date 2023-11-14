@@ -1,43 +1,70 @@
-.section2 {
-  color: white;
-}
-.sec2C {
-  width: 80%;
-  margin-inline: auto;
-}
-.subeducation {
-  padding-bottom: 40px;
-}
-.education {
-  padding-top: 50px;
+  /* color: #b84aca; */
+.porjects{
+  padding-top: 30px;
+  padding-bottom: 30px;
   font-size: 58px;
   text-align: center;
-  padding-bottom: 130px;
   color: #b84aca;
-  opacity: 0;
 }
-@media screen and (max-width: 832px) {
-  /* CSS rules for screens with a maximum width of 768px */
-  .education {
-    font-size: 40px;
-  }
+.slider-container {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
 }
-.edc1 {
-  font-size: 27px;
-}
-.edc1-2 {
-  text-align: right;
-  font-size: 22px;
-}
-.edc-img {
+
+.slide-wrapper {
   display: flex;
-  align-items: center;
+  transition: transform 0.5s ease-in-out;
 }
-.edcimg {
-  margin-right: 30px;
-  height: 50px;
-  width: 50px;
+
+.slide {
+  min-width: 100%;
+  height: 70vh;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.slide div img {
+  margin-bottom: 20px;
+
+}
+
+.slide img {
+  border-radius: 10px !important;
+  max-width: 100%;
+  max-height: 70vh; /* Adjust as needed */
+}
+
+.navigation-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 3vw;
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  outline: none;
   background-color: #b84aca;
   border-radius: 50%;
-  padding: 2px;
+  width: 3vw;
+  height: 3vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center; 
+  line-height: 1;
+}
+
+.prev-btn {
+  left: 10px;
+  color: white;
+}
+
+.next-btn {
+  color: white;
+  right: 10px;
 }

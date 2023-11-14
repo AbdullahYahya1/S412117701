@@ -14,6 +14,8 @@ if(! isset($_SESSION['name'])){
     <title>Education</title>
   </head>
   <body>
+  <div id="light"></div>
+
     <div class="circle circle1"></div>
     <div class="circle circle2"></div>
     <div class="Maincontainer">
@@ -67,5 +69,6 @@ if(! isset($_SESSION['name'])){
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
     <script src="app.js"></script>
+    
   </body>
 </html>

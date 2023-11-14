@@ -14,6 +14,8 @@ if(! isset($_SESSION['name'])){
     <title>Education</title>
   </head>
   <body>
+  <div id="light"></div>
+
     <div class="circle circle1"></div>
     <div class="circle circle2"></div>
     <div class="Maincontainer">

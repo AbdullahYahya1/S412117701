@@ -24,6 +24,7 @@ if(! isset($_SESSION['name'])){
     <title>Education</title>
   </head>
   <body>
+  <div id="light"></div>
     <div class="circle circle4"></div>
     <div class="Maincontainer">
       <header id="header">
@@ -277,5 +278,6 @@ if(! isset($_SESSION['name'])){
     <scrdiv src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
     <script src="app.js"></script>
+    <script src="../gloable_Style_js/gloable.js"></script>
   </body>
 </html>

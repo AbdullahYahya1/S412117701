@@ -15,6 +15,8 @@ if(! isset($_SESSION['name'])){
     <title>Education</title>
   </head>
   <body>
+  <div id="light"></div>
+
     <!-- <div class="circle circle1"></div>
     <div class="circle circle2"></div> -->
     <div class="Maincontainer">
@@ -42,12 +44,52 @@ if(! isset($_SESSION['name'])){
       </div>
       </header>
 
-      <div class="section" >
+    <h1 class="porjects">porjects</h1>
 
+
+  <div class="slider-container">
+    <div class="slide-wrapper">
+      <div class="slide">
+        <div>
+          <img src="imgs/project1.jpg" alt="pro1">
+        </div>
+        <div>
+          <p>Project 1 Description</p>
+        </div>
       </div>
+
+      <div class="slide">
+        <div>
+          <img src="imgs/project1.jpg" alt="pro2">
+        </div>
+        <div>
+          <p>Project 2 Description</p>
+        </div>
+      </div>
+
+      <div class="slide">
+        <div>
+          <img src="imgs/project1.jpg" alt="pro3">
+        </div>
+        <div>
+          <p>Project 3 Description</p>
+        </div>
+      </div>
+
+      <!-- Add more slides as needed -->
     </div>
+
+    <button class="navigation-btn prev-btn" onclick="prevSlide()">❮</button>
+    <button class="navigation-btn next-btn" onclick="nextSlide()">❯</button>
+  </div>
+
+
+
+
+  </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
     <script src="app.js"></script>
+    
   </body>
 </html>
