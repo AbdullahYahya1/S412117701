@@ -8,7 +8,9 @@
         private $conn;
         public $isconnected;
         public function __construct() {
-            session_start();
+            if (session_status() != PHP_SESSION_ACTIVE) {
+                session_start();
+            }
             $this->conn = mysqli_connect($this->host, $this->username, $this->password, $this->database);
             if ($this->conn) {
                 $this->isconnected = true;
