@@ -53,27 +53,37 @@ class AuthController {
         if(!isset( $_POST['message'])){
             return; 
         }
-        if (! $this->dbModel->isconnected) {
+        if (!$this->dbModel->isconnected) {
             return;
         }
-        $this->dbModel->message1($_POST['message']);
+        $res= $this->dbModel->message1($_POST['message']);
+        if ($res) {
+            header('Location: ../?state=massage%20have%20been%20sent');
         }
+        }
+    public function messages() {
+        return $this->dbModel->messages();
     }
-// $authController = new AuthController();
-// $authController->login();  // or $authController->register($name, $password, $email);
+    public function getemail($id){
+        return $this->dbModel->getemail($id);
+    }
+    }
 
-$authController = new AuthController();
 
 if (isset($_POST['register'])){
+    $authController = new AuthController();
     $authController->register();
 }elseif(isset($_POST['login'])){
+    $authController = new AuthController();
     $authController->login();
 }elseif(isset($_POST['message'])){
+    $authController = new AuthController();
     $authController->message();
     echo($_POST['message']); 
 }
 
 if (isset($_GET['action'])){
+    $authController = new AuthController();
     $action = $_GET['action'];
     switch ($action) {
         case 'logout':

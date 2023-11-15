@@ -91,3 +91,17 @@ flex: 1;
   bottom: 40px;
 }
 
+
+
+@media screen and (max-width : 747px) {
+  .massagecontainer {
+    flex-direction: column;
+    height: auto;
+    min-width:0px;  
+  }
+  .massagecontainer *{
+    margin-bottom: 30px;
+
+  }
+
+}

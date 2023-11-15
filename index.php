@@ -16,7 +16,18 @@ if(! isset($_SESSION['name'])){
 </head>
 <body>
 <div id="light"></div>
-
+    <?php 
+    
+    if(isset($_GET['state'])){
+        echo'<div class="mycontainer">
+        <div class="X">
+            x
+        </div>'.
+        $_GET['state'].
+        '</div>';
+    }
+    
+    ?>
         <div class='left_bar'>
             <a href="#" id='education_logo_right'>
                 <div>
@@ -67,7 +78,7 @@ if(! isset($_SESSION['name'])){
                     Experience
                 </p>
                 <a href='view/EDUCATION'>
-                <p >
+                <p>
                     Education
                 </p>
                 </a>
@@ -126,6 +137,7 @@ if(! isset($_SESSION['name'])){
 
 
     </div>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
     <script src="app.js"></script>

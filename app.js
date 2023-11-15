@@ -58,7 +58,16 @@ function handleScrollTo100vhPlus30px() {
         
 }
 
+document.addEventListener('DOMContentLoaded', function() {
+c= document.querySelector('.X');
+c.addEventListener('click',()=>{
+  document.querySelector('.mycontainer').style.display='none'
+  var newUrl =  window.location.href.split('?')[0];
+  history.replaceState({}, document.title, newUrl);
+})
 
+
+})
 // gsap.to('.section2img',{
 //     opacity:1, 
 //     duration:3,

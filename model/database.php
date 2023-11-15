@@ -62,11 +62,19 @@
         $id = $_SESSION["id"];
         $query = "INSERT INTO `message` (`user_id`, `message`) VALUES ('$id', '$message')";
         $this->query($query);
-        
+        return $id; 
     
     }
+    public function getEmail($id){
+        $query = "SELECT email FROM users WHERE id = '$id'";
+        return $this->query($query);
+    }
     
-    
+    public function messages(){
+        $query = "SELECT `user_id`, `message` FROM `message` ORDER BY `date` DESC";
+        $res=$this->query($query);
+        return $res;
+    }    
         public function __destruct() {
             mysqli_close($this->conn);
         }
