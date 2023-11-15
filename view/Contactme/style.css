@@ -1,43 +1,93 @@
-.section2 {
+
+.massagecontainer{
+  background-color: #B84ACA33; 
   color: white;
+  height: 400px;
+  padding: 30px;
+  min-width: 300px;
+  max-width: 700px;
+  margin-inline:auto ;
+  font-weight: bold;
+  box-shadow: 0px 0px 10px rgb(176, 29, 171);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: row-reverse;
 }
-.sec2C {
-  width: 80%;
-  margin-inline: auto;
-}
-.subeducation {
-  padding-bottom: 40px;
-}
-.education {
-  padding-top: 50px;
+.contMe{
+  padding-top: 25px;
+  padding-bottom: 25px;
   font-size: 58px;
   text-align: center;
-  padding-bottom: 130px;
   color: #b84aca;
-  opacity: 0;
 }
-@media screen and (max-width: 832px) {
-  /* CSS rules for screens with a maximum width of 768px */
-  .education {
-    font-size: 40px;
-  }
+.contms2{
+  font-weight: lighter;
+  max-width: 300px;
+  font-size: 18px;
+  letter-spacing: 1.1px;
+  line-height: 23px;
+  margin-bottom: 50px;
 }
-.edc1 {
-  font-size: 27px;
+.ms1{
+flex: 1;
+
 }
-.edc1-2 {
-  text-align: right;
-  font-size: 22px;
+.ms2{
+  flex: 1;
 }
-.edc-img {
+.ms2 div{
+  margin-bottom: 25px;
+}
+
+.ms2 div i{
+  margin-right: 10px;
+}
+.formMessage{
   display: flex;
-  align-items: center;
+  flex-direction: column;
 }
-.edcimg {
-  margin-right: 30px;
-  height: 50px;
-  width: 50px;
-  background-color: #b84aca;
-  border-radius: 50%;
-  padding: 2px;
+.formMessage textarea , .formMessage input{
+
+  padding: 0;
+  margin: 0;
+  font-size: 100%;
+  border: 0;
+  background-color: white;
+  resize: none;
 }
+
+.formMessage p , .ms2 .h{
+  font-size: 25px;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+.formMessage textarea{
+  padding-left:8px;
+  padding-top:8px ;
+  margin-bottom: 25px;
+  height: 170px;
+  width: 100%;
+  background: #FFFFFF4D;
+  border-radius: 10px;
+
+}
+.formMessage input{
+  width: 130px;
+  padding: 8px;
+  background: linear-gradient(95.61deg, #2954A3 -8.54%, #B84ACA 77.53%);
+  border-radius: 7px;
+
+}
+
+.section{
+  z-index: 100 !important;
+}
+.c1 , .c2{
+  width: 200px;
+  height: 200px;
+}
+.c1{
+  right: -100px;
+  bottom: 40px;
+}
+

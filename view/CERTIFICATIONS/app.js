@@ -9,11 +9,46 @@
         });
         light.style.opacity=1; 
 }
+function startCircleAnimation() {
+  gsap.to(".circle", {
+    opacity: 0.6,
+    duration: 7,
+    yoyo: true, // Makes the animation play in reverse after completing
+    repeat: -1 // Infinite repeat
+  });
+}
+document.addEventListener('DOMContentLoaded', function() {
+  startCircleAnimation();
+});
+gsap.to('.CERTI_title',{
+    opacity:1, 
+    duration:5,
+}
+)
 
-// gsap.to('.education',{
-//     opacity:1, 
-//     duration:5,
-// })
+gsap.to('.left1',{
+  left:0, 
+  duration:3,
+}
+)
+gsap.to('.right1',{
+  left:0, 
+  duration:3,
+}
+)
+
+
+gsap.to('.left2',{
+  left:0, 
+  duration:3,
+}
+)
+gsap.to('.right2',{
+  left:0, 
+  duration:3,
+}
+)
+
 
 // gsap.to('.circle',{
 //     opacity:1, 

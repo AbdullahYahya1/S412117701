@@ -13,18 +13,20 @@
     <!-- <div class="circle circle1"></div>
     <div class="circle circle2"></div> -->
     <div class="Maincontainer">
-      <div class="Maincontainer">
+      <div class="x">
         <h1 class="s1">
-          LOGIN
+          Sign In
         </h1>
         <div class="section" >
           <form action="/s412117701p/controlle/controlle.php" method="post">
-            <input type="text" name="PHP_AUTH_USER" placeholder="name">
-            <input type="password" name="PHP_AUTH_PW" placeholder="password">
+            <p>name</p>
+            <input type="text" name="PHP_AUTH_USER" >
+            <p>password</p>
+            <input type="password" name="PHP_AUTH_PW" >
             <input type="submit" name='login' value="login">
           </form>
-          <a href="/s412117701p/view/register">
-            <p class="register">register</p>
+          <a class="register" href="/s412117701p/view/register">
+            <p >register</p>
           </a>
           <?php
           if (isset($_GET['stat'])){

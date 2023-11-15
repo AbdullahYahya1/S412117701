@@ -19,15 +19,15 @@ function prevSlide() {
   showSlide(currentIndex);
 }
 
-
-let interval = setInterval(nextSlide, 4000);
+nextSlide()
+let interval = setInterval(nextSlide, 3000);
 
 document.querySelectorAll('.navigation-btn').forEach(function(buttonClicked) {
   buttonClicked.addEventListener('click', function() {
     setTimeout(() => {
       clearInterval(interval);
-      interval = setInterval(nextSlide, 4000);
-    }, 6000);
+      interval = setInterval(nextSlide, 3000);
+    }, 500);
   });
 });
 

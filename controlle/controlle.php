@@ -46,9 +46,7 @@ class AuthController {
                 header("Location: ../view/register?error=Registration%20failed,%20please%20try%20again");
             }
             if ($this->dbModel->register($name, $password, $email)) {
-                $_SESSION['name'] = $name;
-                $_SESSION['id'] = $id;
-                header("Location: ../");
+                header("Location: ../view/login?register=you%20have%20been%20registerd");
             } else {
                 header("Location: ../view/register?error=Registration%20failed,%20please%20try%20again");
             }
@@ -67,6 +65,8 @@ if (isset($_POST['register'])){
     $authController->register();
 }elseif(isset($_POST['login'])){
     $authController->login();
+}elseif(isset($_POST['message'])){
+    echo($_POST['message']); 
 }
 
 if (isset($_GET['action'])){

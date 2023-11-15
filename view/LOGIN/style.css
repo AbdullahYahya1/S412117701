@@ -1,20 +1,54 @@
-.container{
-    flex-direction: row;
-    align-items: end;
-    justify-content: flex-end;
-    margin-right: 30px;
-  }
-  .section{
-    background-color: #b84aca;
-  }
-  .register{
-    color: white;
-    border: 1px solid black;
-  }
-input:focus {
-  /* filter: blur(5px); Adjust the blur radius as needed */
-  border: 2px solid transparent; /* Make the border transparent */
-  outline: none; /* This removes the default focus outline (optional) */
-  box-shadow: 0 0 10px 5px #b84aca; /* Apply a blurred shadow */
 
+
+
+  .Maincontainer{
+    background-color: #B84ACA33; 
+    color: white;
+    height: 300px;
+    padding: 30px;
+    min-width: 300px;
+    max-width: 300px;
+    margin-inline:auto ;
+    font-weight: bold;
+    box-shadow: 0px 0px 10px rgb(176, 29, 171);
+    border-radius: 10px;
+  }
+form{
+  padding: 20px;
+    display: flex;
+    flex-direction: column;
+    
+}
+form p{
+  margin: 0;
+  padding: 0;
+  margin-bottom: 5px;
+}
+form input{
+  margin: 0;
+  padding:0 ;
+  border: 0;
+  margin-bottom: 20px;
+
+}
+form [type='text'] , form [type='password']{
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 2px;
+  padding-right: 2px;
+}
+form [type='submit']{
+  padding: 5px;
+}
+.s1{
+  text-align: center;
+  margin-bottom: 30px;
+}
+input:focus {
+  border: 2px solid transparent;
+  outline: none; 
+  box-shadow: 0 0 10px 5px #b84aca;
+}
+.register{
+  text-align: center;
 }

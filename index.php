@@ -66,22 +66,25 @@ if(! isset($_SESSION['name'])){
                 <p >
                     Experience
                 </p>
-                <a href='/s412117701p/view/EDUCATION'>
+                <a href='view/EDUCATION'>
                 <p >
                     Education
                 </p>
                 </a>
-                <a href="/s412117701p/view/CERTIFICATIONS">
+                <a href="view/CERTIFICATIONS">
                     <p>
                         Certfifactions
                     </p>
                 </a>
-                <a href="/s412117701p/view/Projects">
+                <a href="view/Projects">
                     <p >Projects</p>
                   </a>
-                <p>
+                <a href="view/Contactme">
+                  <p>
                 Contact Me
                 </p>
+                </a>
+
                 <p>
                     <a href="controlle/controlle.php?action=logout">Logout</a>;
                 </p>

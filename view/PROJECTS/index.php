@@ -37,42 +37,43 @@ if(! isset($_SESSION['name'])){
           <a href="/s412117701p/view/Projects">
           <p class="currentPage">Projects</p>
           </a>
+          <a href="/s412117701p/view/CONTACTME">
           <p>Contact Me</p>
+          </a>
           <p>
           <a href="../../controlle/controlle.php?action=logout">Logout</a>;
           </p>
       </div>
       </header>
 
-    <h1 class="porjects">porjects</h1>
+    <h1 class="porjects">PROJECTS</h1>
 
 
   <div class="slider-container">
     <div class="slide-wrapper">
       <div class="slide">
-        <div>
+        <div class='rel'>
           <img src="imgs/project1.jpg" alt="pro1">
-        </div>
-        <div>
-          <p>Project 1 Description</p>
+          <p class='projectTitlename'>Project 1 Description</p>
         </div>
       </div>
 
-      <div class="slide">
-        <div>
-          <img src="imgs/project1.jpg" alt="pro2">
-        </div>
-        <div>
-          <p>Project 2 Description</p>
-        </div>
-      </div>
+
 
       <div class="slide">
-        <div>
+        <div class='rel'>
           <img src="imgs/project1.jpg" alt="pro3">
+          <p class='projectTitlename'>Project 3 Description</p>
         </div>
-        <div>
-          <p>Project 3 Description</p>
+      </div>
+
+
+
+
+      <div class="slide">
+        <div class='rel'>
+          <img src="imgs/project1.jpg" alt="pro3">
+          <p class='projectTitlename'>Project 3 Description</p>
         </div>
       </div>
 

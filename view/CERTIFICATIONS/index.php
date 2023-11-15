@@ -35,16 +35,18 @@ if(! isset($_SESSION['name'])){
             <p>About Me</p>
           </a>
           <p>Experience</p>
-          <a href="/s412117701p/view/EDUCATION/">
+          <a href="../../view/EDUCATION/">
             <p>Education</p>
           </a>
           <a href="">
             <p class="currentPage">Certfifactions</p>
           </a>
-          <a href="/s412117701p/view/Projects">
+          <a href="../../view/Projects">
             <p >Projects</p>
           </a>
-          <p>Contact Me</p>
+          <a href="../../view/CONTACTME/">
+            <p>Contact Me</p>
+          </a>
           <p>
           <a href="../../controlle/controlle?action=logout">Logout</a>
           
@@ -60,8 +62,8 @@ if(! isset($_SESSION['name'])){
 
 
 
-          <div class="CERTIF_Container">
-          <div class="CERTIF_Container_Flex">
+        <div class="CERTIF_Container ">
+          <div class="CERTIF_Container_Flex left1">
             <div>
               <svg
                 width="100"
@@ -114,8 +116,8 @@ if(! isset($_SESSION['name'])){
           </div>
         </div>
 
-        <div class="CERTIF_Container">
-          <div class="CERTIF_Container_Flex">
+        <div class="CERTIF_Container ">
+          <div class="CERTIF_Container_Flex right1">
             <div>
               <svg
                 width="100"
@@ -167,7 +169,7 @@ if(! isset($_SESSION['name'])){
           </div>
         </div>
         <div class="CERTIF_Container">
-          <div class="CERTIF_Container_Flex">
+          <div class="CERTIF_Container_Flex left2">
             <div>
               <svg
                 width="100"
@@ -219,7 +221,7 @@ if(! isset($_SESSION['name'])){
           </div>
         </div>
         <div class="CERTIF_Container">
-          <div class="CERTIF_Container_Flex">
+          <div class="CERTIF_Container_Flex right2">
             <div>
               <svg
                 width="100"
@@ -275,9 +277,8 @@ if(! isset($_SESSION['name'])){
       </div>
       </div>
     </div>
-    <scrdiv src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
     <script src="app.js"></script>
-    <script src="../gloable_Style_js/gloable.js"></script>
   </body>
 </html>
