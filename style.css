@@ -5,6 +5,10 @@ body{
     margin: 0;
     background-color: black;
     color: white;
+
+}
+*{
+    cursor: none;
 }
 a{
     all: unset;
@@ -54,7 +58,6 @@ p , h4 , h1 {
 }
 .left_bar a div:hover{
     background-color: #B84ACA;
-    cursor: pointer;
 }
 header{
     background-color: black;
@@ -75,7 +78,6 @@ header{
 header p , header h4{
     color: white;
     padding-bottom: 5px;
-    cursor: pointer;
 }
 header p{
     font-family: 'Courier New', Courier, monospace;
@@ -167,7 +169,6 @@ header p:active{
     padding: 10px 20px ;
     border-radius: 20px;
     border: none;
-    cursor: pointer;
     font-size: 20px;
 }
 .buttons_div button:first-child{
@@ -195,12 +196,11 @@ header p:active{
     border-radius: 50%;
     pointer-events: none;
     transform-origin: 50% 50%;
-    box-shadow: 0 0 10px 5px #db74eb;
-    transition: transform 0.1s ease-out;
+    box-shadow: 0 0 10px 15px rgb(170, 0, 196);
+    transition: transform 0.06s ease-out;
     transform: scale(1) translate(-50%, -50%);
-    filter: blur(10px);
-    background-size: 50% 200%; /* Adjust this value to control the cut angle */
-
+    filter: blur(7px);
+    z-index: 10;
 }
 
 

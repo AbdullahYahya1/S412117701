@@ -8,6 +8,7 @@
         private $conn;
         public $isconnected;
         public function __construct() {
+            session_start();
             $this->conn = mysqli_connect($this->host, $this->username, $this->password, $this->database);
             if ($this->conn) {
                 $this->isconnected = true;
@@ -57,6 +58,15 @@
         }
         return true;
     }
+    public function message1($message){
+        $id = $_SESSION["id"];
+        $query = "INSERT INTO `message` (`user_id`, `message`) VALUES ('$id', '$message')";
+        $this->query($query);
+        
+    
+    }
+    
+    
         public function __destruct() {
             mysqli_close($this->conn);
         }

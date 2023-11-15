@@ -4,7 +4,6 @@
   .Maincontainer{
     background-color: #B84ACA33; 
     color: white;
-    height: 300px;
     padding: 30px;
     min-width: 300px;
     max-width: 300px;
@@ -31,14 +30,22 @@ form input{
   margin-bottom: 20px;
 
 }
+.section{
+  height: auto;
+}
 form [type='text'] , form [type='password']{
   padding-top: 5px;
   padding-bottom: 5px;
   padding-left: 2px;
   padding-right: 2px;
+  background: #FFFFFF4D;
+
 }
 form [type='submit']{
   padding: 5px;
+  margin-bottom: 20px;
+  background: linear-gradient(95.61deg, #2954A3 -8.54%, #B84ACA 77.53%);
+
 }
 .s1{
   text-align: center;
@@ -50,5 +57,11 @@ input:focus {
   box-shadow: 0 0 10px 5px #b84aca;
 }
 .register{
+  cursor: pointer;
+  margin-top: 10px;
   text-align: center;
+  transition: all .5s ;
+}
+.register:hover{
+  color:#b84aca; 
 }

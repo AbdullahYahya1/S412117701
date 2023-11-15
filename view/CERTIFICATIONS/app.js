@@ -28,24 +28,24 @@ gsap.to('.CERTI_title',{
 
 gsap.to('.left1',{
   left:0, 
-  duration:3,
+  duration:2.7,
 }
 )
 gsap.to('.right1',{
   left:0, 
-  duration:3,
+  duration:3.2,
 }
 )
 
 
 gsap.to('.left2',{
   left:0, 
-  duration:3,
+  duration:3.7,
 }
 )
 gsap.to('.right2',{
   left:0, 
-  duration:3,
+  duration:4.2,
 }
 )
 

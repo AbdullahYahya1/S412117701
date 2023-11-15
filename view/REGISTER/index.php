@@ -1,3 +1,7 @@
+
+
+
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -13,20 +17,28 @@
     <!-- <div class="circle circle1"></div>
     <div class="circle circle2"></div> -->
     <div class="Maincontainer">
-      <div class="Maincontainer">
+      <div class="x">
         <h1 class="s1">
-          LOGIN
+          Sign Up
         </h1>
         <div class="section" >
-          <form action="../../controlle/controlle.php" method="post">
+          <form action="/s412117701p/controlle/controlle.php" method="post">
+            <p>name</p>
             <input type="text" name="PHP_AUTH_USER" placeholder="name">
-            <input type="password" name="PHP_AUTH_PW" placeholder="password">
-            <input type="email" name="email" placeholder="email">
+            <p>password</p>
+            <input type="password" name="PHP_AUTH_PW" >
+            <p>email</p>
+            <input type="email" name="email">
             <input type="submit" name='register' value="register">
           </form>
           <a href="/s412117701p/view/login">
             <p class="register">login</p>
           </a>
+          <?php
+          if (isset($_GET['stat'])){
+            echo 'somthing went wrong try again or register';
+          }
+          ?>
         </div>
 
     </div>

@@ -4,9 +4,7 @@ require_once __DIR__ . '/../model/database.php';
 
 class AuthController {
     private $dbModel;
-
     public function __construct() {
-        session_start();
         $this->dbModel = new DatabaseModel();
     }
     public function logout() {
@@ -26,10 +24,7 @@ class AuthController {
                 header("Location: ../");
                 // header("Location: ../?success=Registration%20successful,%20please%20login");
             } else {
-                $_SESSION = array();
-                session_destroy();
                 header("Location: ../view/login?stat=1");
-
             }
         } else {
             echo 'dbModel is not connected ';
@@ -54,8 +49,16 @@ class AuthController {
             echo 'dbModel is not connected ';
         }
     }
-}
-
+    public function message(){
+        if(!isset( $_POST['message'])){
+            return; 
+        }
+        if (! $this->dbModel->isconnected) {
+            return;
+        }
+        $this->dbModel->message1($_POST['message']);
+        }
+    }
 // $authController = new AuthController();
 // $authController->login();  // or $authController->register($name, $password, $email);
 
@@ -66,6 +69,7 @@ if (isset($_POST['register'])){
 }elseif(isset($_POST['login'])){
     $authController->login();
 }elseif(isset($_POST['message'])){
+    $authController->message();
     echo($_POST['message']); 
 }
 
