@@ -69,16 +69,10 @@ else{
   });
 }
 }
-function left_bardispear() {
-
-}
 var clicked=false
 document.addEventListener('DOMContentLoaded', function () {
-  var leftbar = document.querySelector('.left_bar');
   var arrow_right = document.querySelector('.arrow_right');
-
   arrow_right.addEventListener('click', function () {
-  
     if (! clicked) {
       left_barshow(true)
       if(window.innerWidth*0.05 <50){
@@ -87,12 +81,10 @@ document.addEventListener('DOMContentLoaded', function () {
         arrow_right.style.left = '5%';
       }
       clicked=true
-
       } else {
         left_barshow()
         arrow_right.style.left = '0';
         clicked=false
-
       }
     });
   });
