@@ -36,8 +36,6 @@ gsap.to('.right1',{
   duration:3.2,
 }
 )
-
-
 gsap.to('.left2',{
   left:0, 
   duration:3.7,
@@ -46,6 +44,11 @@ gsap.to('.left2',{
 gsap.to('.right2',{
   left:0, 
   duration:4.2,
+}
+)
+gsap.to('.left4',{
+  left:0, 
+  duration:5,
 }
 )
 

@@ -63,15 +63,7 @@ if (!isset($_SESSION['name'])) {
           <p class="edc1-2">Qassim University</p>
           <p class="edc1-2">2020-Present</p>
         </div>
-        <div class="subeducation">
-          <div class="edc-img">
-            <img class="edcimg" src="edcimg" alt="" />
-            <p class="edc1">Bachelor Computer-Science</p>
-          </div>
-          <p class="edc1-2">Qassim University</p>
-          <p class="edc1-2">2020-Present</p>
-          <div class="trig1"></div>
-        </div>
+
       </div>
     </div>
   </div>

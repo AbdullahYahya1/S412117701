@@ -45,9 +45,6 @@ if(! isset($_SESSION['name'])){
                         About Me 
                     </p>
                 </a>
-                <p >
-                    Experience
-                </p>
                 <a href='view/EDUCATION'>
                 <p>
                     Education
@@ -68,7 +65,7 @@ if(! isset($_SESSION['name'])){
                 </a>
 
                 <p>
-                    <a href="controlle/controlle.php?action=logout">Logout</a>;
+                    <a href="controlle/controlle.php?action=logout">Logout</a>
                 </p>
 
             </div>
@@ -77,7 +74,6 @@ if(! isset($_SESSION['name'])){
         <img src="img1.png" class="img1">
         <div class="circle circle1"></div>
         <div class="circle circle2"></div>
-        <div class="circle circle3"></div>
 
 
         <div class="section section1"id='section1'>
@@ -86,7 +82,7 @@ if(! isset($_SESSION['name'])){
                     I'm Abdullah Yahya
                 </p>
                 <p class="job">
-                    Problem Solver & Web Developer
+                    Web Developer
                 </p>
                 <p class="interest">
                     I am intersted in solving any kind of problems
@@ -101,9 +97,6 @@ if(! isset($_SESSION['name'])){
         </div>
 
 
-        <div class="sectionSep sectionSep1">
-                <hr>
-        </div>
 
 
 
@@ -112,7 +105,6 @@ if(! isset($_SESSION['name'])){
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
     <script src="app.js"></script>
-    <script src="addionals/left_bar.js"></script>
 </body>
 </html>
 

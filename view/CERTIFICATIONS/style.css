@@ -26,6 +26,11 @@ height:7vw;
     min-height: 200px;
 
 }
+.mid{
+    margin-inline:auto ; 
+    grid-column: 1 / -1; 
+    width: 50%;
+}
 .left1{
     left: -1000px;
 }
@@ -38,7 +43,9 @@ height:7vw;
 .right2{
     right:-4000px;
 }
-
+.left4{
+    left:-5000px;
+}
 .CERTIFelements{
 padding-bottom: 20px;
 display: grid;
@@ -49,17 +56,11 @@ grid-gap: 30px; /* Adds a 10px gap between rows and columns */
     margin-left: 20px;
     padding-top: 10px;
     font-size: 27px;
-    flex: 1;
+    flex: 2;
     text-align: left;
 }
-.textC ul{
-    margin-top: 20px;
-    padding-left: 20px;
-}
-.textC ul li{
-    font-size: 22px;
-    margin: 0;
-    padding: 0;
+.textC *{
+    margin-bottom: 15px;
 }
 .circle4{
     z-index: -10;
@@ -73,20 +74,27 @@ grid-gap: 30px; /* Adds a 10px gap between rows and columns */
     /* <div class="circle circle4"></div> */
 
 }
+.Show{
+    cursor: pointer;
+    transition: all 0.5s;
+}
+.Show:hover{
+    color: #B84ACA;
+}
 
 @media screen and (max-width: 832px) {
 .CERTIFelements{
     grid-template-columns:1fr;
-
+}
+.mid{
+    width: 100%;
 }
 .CERTI_title{
     font-size: 40px;
-
 }
 }
 @media screen and (max-width: 500px) {
 .CERTI_title{
     font-size: 35px;
-
 }
 }

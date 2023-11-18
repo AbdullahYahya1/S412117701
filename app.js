@@ -6,10 +6,23 @@
     setTimeout(() => {
         gsap.to('.name',{
             opacity:1, 
-            duration:5,
+            duration:3,
+        })   
+        setTimeout(() => {
+          gsap.to('.job',{
+            opacity:1, 
+            duration:3,
+          })   
+          gsap.to('.interest',{
+            opacity:1, 
+            duration:3,
+          })  
+        }, 450);
+
+        gsap.to('.img1',{
+          right:'0px',
+          duration:2,
         })
-    
-   
       }, 250);
 
   })

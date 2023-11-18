@@ -5,7 +5,7 @@ body{
     margin: 0;
     background-color: black;
     color: white;
-
+    overflow-x: hidden;
 }
 
 a{
@@ -85,6 +85,7 @@ header{
     height: 50px;
     border-bottom: 1px solid rgba(255, 255, 255, 0.27);
     border-width:0.1px;
+    z-index: 10;
 }
 .container{
     display:flex;
@@ -115,11 +116,10 @@ header p:active{
 
 .img1{
     width:150px;
-    right: 0px;
+    right: -200px;
     top: 100px;
     z-index: -1;
     position:absolute;
-
 }
 
 .circle {
@@ -170,12 +170,15 @@ header p:active{
     padding-bottom: 13vh;
 }
 .job{
+    opacity: 0;
     font-size: 40px;
     color: #c461d3;
     padding-bottom: 2vw;
 
 }
 .interest{
+    opacity: 0;
+
     font-size: 30px;
     padding-bottom: 10vw;
 
