@@ -33,7 +33,6 @@ if(! isset($_SESSION['name'])){
           <a href="/s412117701p">
             <p>About Me</p>
           </a>
-          <p>Experience</p>
           <a href="/s412117701p/view/Education">
             <p >Education</p>
           </a>
@@ -56,30 +55,29 @@ if(! isset($_SESSION['name'])){
 
 
   <div class="slider-container">
-    <div class="slide-wrapper">
+    <div  class="slide-wrapper">
       <div class="slide">
         <div class='rel'>
-          <img src="imgs/project1.jpg" alt="pro1">
-          <p class='projectTitlename'>Project 1 Description</p>
+          <img src="imgs/Screenshot_91.png" alt="pro1">
+          <a href="https://www.youtube.com/watch?v=3M-atQOJGxM">
+            <p class='projectTitlename'>Commerce: on youtube</p>
+          </a>
+        </div>
+      </div>
+      <div class="slide">
+        <div class='rel'>
+          <img src="imgs/gradebook.png" alt="pro3">
+          <a href="https://www.youtube.com/watch?v=iLwDEVR436Q">
+          <p class='projectTitlename'>gradebook: on youtube</p>
+          </a>
         </div>
       </div>
 
-
-
       <div class="slide">
         <div class='rel'>
-          <img src="imgs/project1.jpg" alt="pro3">
-          <p class='projectTitlename'>Project 3 Description</p>
-        </div>
-      </div>
-
-
-
-
-      <div class="slide">
-        <div class='rel'>
-          <img src="imgs/project1.jpg" alt="pro3">
-          <p class='projectTitlename'>Project 3 Description</p>
+          <img src="imgs/secure.png" alt="pro3">
+          <a href="https://www.youtube.com/watch?v=wrHm-2NWslQ">
+          <p class='projectTitlename'>SecuTask: on youtube</p></a>
         </div>
       </div>
 

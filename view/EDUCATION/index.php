@@ -33,7 +33,6 @@ if (!isset($_SESSION['name'])) {
         <a href="/s412117701p">
           <p>About Me</p>
         </a>
-        <p>Experience</p>
         <a href="">
           <p class="currentPage">Education</p>
         </a>

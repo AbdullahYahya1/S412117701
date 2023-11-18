@@ -7,9 +7,9 @@ body{
     color: white;
     overflow-x: hidden;
 }
-
 a{
     all: unset;
+    cursor: pointer;
 }
 .Maincontainer{
     width: 80% !important;

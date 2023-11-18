@@ -31,10 +31,9 @@
 
 .slide img {
   border-radius: 10px !important;
-  min-width: 100%;
-  min-height: 100%; /* Adjust as needed */
-  overflow: hidden; /* Hide any overflowing content */
-  object-fit: cover;
+  width: 500px;
+  height: 500px;
+  overflow: hidden; 
 }
 .rel{
   position: relative;;
