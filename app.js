@@ -1,22 +1,6 @@
 
 
-function handleScrollTo100vhPlus30px() {
-    var scrollPosition = window.scrollY;
-    const bar = document.querySelector('.section2img')
-    var targetPosition = window.innerHeight -(window.innerHeight/3) ;
-    if (scrollPosition <= targetPosition) {
-        gsap.to(".left_bar",{
-            x:-100,
-            duration:.75,
-        })
-    }else{
-        gsap.to(".left_bar",{
-            x:100,
-            duration:0.75,
-        })
-    }
 
-  }
   
   document.addEventListener('DOMContentLoaded' , function(){
     setTimeout(() => {
@@ -35,11 +19,11 @@ function handleScrollTo100vhPlus30px() {
     gsap.to(".circle", {
       opacity: 1,
       duration: 7,
-      yoyo: true, // Makes the animation play in reverse after completing
-      repeat: -1 // Infinite repeat
+      yoyo: true, 
+      repeat: -1 
     });
   }
-  
+
   document.addEventListener('DOMContentLoaded', function() {
     // Start the circle animation loop
     startCircleAnimation();
@@ -60,14 +44,59 @@ function handleScrollTo100vhPlus30px() {
 
 document.addEventListener('DOMContentLoaded', function() {
 c= document.querySelector('.X');
+if (c){
 c.addEventListener('click',()=>{
   document.querySelector('.mycontainer').style.display='none'
   var newUrl =  window.location.href.split('?')[0];
   history.replaceState({}, document.title, newUrl);
 })
-
+}
 
 })
+
+
+function left_barshow(s) {
+  if (s){
+  gsap.to(".left_bar", {
+    left: '0',
+    duration: 1.5,
+  });
+}
+else{
+  gsap.to(".left_bar", {
+    left: '-100',
+    duration: 1.5,
+  });
+}
+}
+function left_bardispear() {
+
+}
+var clicked=false
+document.addEventListener('DOMContentLoaded', function () {
+  var leftbar = document.querySelector('.left_bar');
+  var arrow_right = document.querySelector('.arrow_right');
+
+  arrow_right.addEventListener('click', function () {
+  
+    if (! clicked) {
+      left_barshow(true)
+      if(window.innerWidth*0.05 <50){
+        arrow_right.style.left = '50px';
+      }else{
+        arrow_right.style.left = '5%';
+      }
+      clicked=true
+
+      } else {
+        left_barshow()
+        arrow_right.style.left = '0';
+        clicked=false
+
+      }
+    });
+  });
+
 // gsap.to('.section2img',{
 //     opacity:1, 
 //     duration:3,

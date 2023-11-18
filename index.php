@@ -28,40 +28,11 @@ if(! isset($_SESSION['name'])){
     }
     
     ?>
-        <div class='left_bar'>
-            <a href="#" id='education_logo_right'>
-                <div>
-                        <i class="fa-solid fa-house fa-xl"></i>          
-                </div>
-            </a>
-            <a href='#section2'>
-                <div class='section2img'>
-                    <i class="fa-solid fa-graduation-cap fa-xl"></i>
-                </div>
-            </a>
-            <a href="#">
-                <div>
-                    <i class="fa-solid fa-award fa-xl"></i>
-                </div>
-            </a>
-            <a href="#">
-                <div>
-                    <i class="fa-solid fa-code fa-xl"></i>
-                </div>
-            </a>
-            <a href="#">
-                <div>
-                    <i class="fa-solid fa-code fa-xl"></i>
-                </div>
-            </a>
+    <?php 
+    $filePath =  '/addionals/left_bar.html';
+    require_once(__DIR__ . $filePath);
 
-            <a href="#">
-                <div>
-                    <i class="fa-solid fa-address-card fa-xl"></i>
-                </div>
-            </a>
-
-        </div>
+    ?>
     <div class='Maincontainer'>
 
         <header id='header'>

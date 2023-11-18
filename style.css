@@ -28,23 +28,40 @@ p , h4 , h1 {
     padding: 0;
     margin: 0;
 }
+
 .left_bar{
-    display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
     position: fixed;
     top: 25%;
     bottom: 25%;
-    left: -100px;
     width: 5%;
     min-width: 45px;
-    background-color: white;
     border-radius: 0px 10px 10px 0px;
     padding-top:12px ;
     padding-bottom:14px ;
-
+    background-color: #c461d3;
+    color: white !important;
+    display: flex;
+    left: -100px;
+    transition: left 0.01s;
+  
 }
+.arrow_right{
+    width: 0; 
+    height: 0; 
+    border-top: 20px solid transparent;
+    border-bottom: 20px solid transparent;
+    border-left: 20px solid #c461d3;
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    left: -100px;
+    transition: all 2s;
+  }
+  
+
 .left_bar a div{
     display: flex;
     justify-content: center;
@@ -239,6 +256,10 @@ header p:active{
         display: none;
         visibility: hidden;
       }
+    .arrow_right{
+        display: block;
+        left: 0;
+    }
 
 }
 

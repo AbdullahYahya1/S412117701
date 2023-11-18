@@ -12,6 +12,8 @@ if (!isset($_SESSION['name'])) {
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="/s412117701p/style.css" />
   <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
   <script src="https://kit.fontawesome.com/4438f26b8e.js" crossorigin="anonymous"></script>
   
   <title>Contact Me</title>
@@ -19,7 +21,10 @@ if (!isset($_SESSION['name'])) {
 
 <body>
   <div id="light"></div>
-
+  <?php 
+      
+      require_once('../../addionals/left_bar.html');
+  ?>
   <div class="circle c1"></div>
   <div class="circle c2"></div>
 
