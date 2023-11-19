@@ -25,7 +25,8 @@ if ('maxTouchPoints' in navigator && navigator.maxTouchPoints === 0) {
       light.style.transform = `translate(${x}px, ${y}px)`;
     });
   });
-  light.style.opacity = 1;
+  setTimeout('light.style.opacity=1; ', 500)
+
 }
 
 

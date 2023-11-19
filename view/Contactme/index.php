@@ -63,7 +63,7 @@ if (!isset($_SESSION['name'])) {
         <div class='ms1'>
           <form class="formMessage" action="/s412117701p/controlle/controlle.php" method="post">
             <p>Send me a message</p>
-            <textarea name="message"></textarea>
+            <textarea name="message" required></textarea>
             <input type="submit" value="Send message">
           </form>
         </div>
