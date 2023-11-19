@@ -12,9 +12,17 @@ if(! isset($_SESSION['name'])){
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/s412117701p/style.css" />
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
     <title>Education</title>
   </head>
   <body>
+  <div id="light"></div>
+
+    <?php 
+      
+        require_once('../../addionals/left_bar.html');
+    ?>
     <!-- <div class="circle circle1"></div>
     <div class="circle circle2"></div> -->
     <div class="Maincontainer">
@@ -25,7 +33,6 @@ if(! isset($_SESSION['name'])){
           <a href="/s412117701p">
             <p>About Me</p>
           </a>
-          <p>Experience</p>
           <a href="/s412117701p/view/Education">
             <p >Education</p>
           </a>
@@ -35,19 +42,60 @@ if(! isset($_SESSION['name'])){
           <a href="/s412117701p/view/Projects">
           <p class="currentPage">Projects</p>
           </a>
+          <a href="/s412117701p/view/CONTACTME">
           <p>Contact Me</p>
+          </a>
           <p>
           <a href="../../controlle/controlle.php?action=logout">Logout</a>;
           </p>
       </div>
       </header>
 
-      <div class="section" >
+    <h1 class="porjects">PROJECTS</h1>
 
+
+  <div class="slider-container">
+    <div  class="slide-wrapper">
+      <div class="slide">
+        <div class='rel'>
+          <img src="imgs/Screenshot_91.png" alt="pro1">
+          <a href="https://www.youtube.com/watch?v=3M-atQOJGxM">
+            <p class='projectTitlename'>Commerce: on youtube</p>
+          </a>
+        </div>
       </div>
+      <div class="slide">
+        <div class='rel'>
+          <img src="imgs/gradebook.png" alt="pro3">
+          <a href="https://www.youtube.com/watch?v=iLwDEVR436Q">
+          <p class='projectTitlename'>gradebook: on youtube</p>
+          </a>
+        </div>
+      </div>
+
+      <div class="slide">
+        <div class='rel'>
+          <img src="imgs/secure.png" alt="pro3">
+          <a href="https://www.youtube.com/watch?v=wrHm-2NWslQ">
+          <p class='projectTitlename'>SecuTask: on youtube</p></a>
+        </div>
+      </div>
+
+      <!-- Add more slides as needed -->
     </div>
+
+    <button class="navigation-btn prev-btn" onclick="prevSlide()">❮</button>
+    <button class="navigation-btn next-btn" onclick="nextSlide()">❯</button>
+  </div>
+
+
+  <div class="padding">
+    </div>
+
+  </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
     <script src="app.js"></script>
+    
   </body>
 </html>

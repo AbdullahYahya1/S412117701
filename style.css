@@ -4,9 +4,12 @@ body{
     padding-top: 50px;
     margin: 0;
     background-color: black;
+    color: white;
+    overflow-x: hidden;
 }
 a{
     all: unset;
+    cursor: pointer;
 }
 .Maincontainer{
     width: 80% !important;
@@ -25,23 +28,42 @@ p , h4 , h1 {
     padding: 0;
     margin: 0;
 }
+
 .left_bar{
-    display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
     position: fixed;
     top: 25%;
     bottom: 25%;
-    left: -100px;
     width: 5%;
     min-width: 45px;
-    background-color: white;
     border-radius: 0px 10px 10px 0px;
     padding-top:12px ;
     padding-bottom:14px ;
-
+    background-color: #c461d3;
+    color: white !important;
+    display: flex;
+    left: -100px;
+    transition: left 0.01s;
+    z-index: 10;
 }
+.arrow_right{
+    width: 0; 
+    height: 0; 
+    border-top: 20px solid transparent;
+    border-bottom: 20px solid transparent;
+    border-left: 20px solid #c461d3;
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    left: -100px;
+    transition: all 2s;
+    z-index: 10;
+
+  }
+  
+
 .left_bar a div{
     display: flex;
     justify-content: center;
@@ -53,7 +75,6 @@ p , h4 , h1 {
 }
 .left_bar a div:hover{
     background-color: #B84ACA;
-    cursor: pointer;
 }
 header{
     background-color: black;
@@ -64,6 +85,7 @@ header{
     height: 50px;
     border-bottom: 1px solid rgba(255, 255, 255, 0.27);
     border-width:0.1px;
+    z-index: 10;
 }
 .container{
     display:flex;
@@ -74,7 +96,6 @@ header{
 header p , header h4{
     color: white;
     padding-bottom: 5px;
-    cursor: pointer;
 }
 header p{
     font-family: 'Courier New', Courier, monospace;
@@ -95,11 +116,10 @@ header p:active{
 
 .img1{
     width:150px;
-    right: 0px;
+    right: -200px;
     top: 100px;
     z-index: -1;
     position:absolute;
-
 }
 
 .circle {
@@ -150,12 +170,15 @@ header p:active{
     padding-bottom: 13vh;
 }
 .job{
+    opacity: 0;
     font-size: 40px;
     color: #c461d3;
     padding-bottom: 2vw;
 
 }
 .interest{
+    opacity: 0;
+
     font-size: 30px;
     padding-bottom: 10vw;
 
@@ -166,7 +189,6 @@ header p:active{
     padding: 10px 20px ;
     border-radius: 20px;
     border: none;
-    cursor: pointer;
     font-size: 20px;
 }
 .buttons_div button:first-child{
@@ -188,27 +210,62 @@ header p:active{
     opacity: 0;
     margin: 0;
     padding: 0;
-    width: 20px;
-    height: 20px;
+    width: 25px;
+    height: 25px;
     background-color: transparent;
     border-radius: 50%;
     pointer-events: none;
     transform-origin: 50% 50%;
-    box-shadow: 0 0 10px 5px #db74eb;
-    transition: transform 0.1s ease-out;
+    box-shadow: 0 0 2px 10px rgb(170, 0, 196);
+    transition: transform 0.06s ease-out;
     transform: scale(1) translate(-50%, -50%);
-    filter: blur(10px);
-    background-size: 50% 200%; /* Adjust this value to control the cut angle */
-
+    filter: blur(13px);
+    z-index: 10;
 }
 
+.mycontainer div{
+    position: absolute;
+    top: -5px;
+    right: 5px;
+    font-size: 30px;
+    color: #000;
+    cursor: pointer;
 
+    transition:all 0.5s  ;
+}
+.mycontainer div:hover{
+    color: #B84ACA;
+}
+.mycontainer div:active{
+    opacity: 0.6;
+}
+.mycontainer{
+    opacity: 0;
+
+    background-color: #bc48cecf;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 30vw;    
+    padding: 40px;
+    font-size: large;
+    font-weight: bolder;
+}
+.padding{
+    height: 100px;
+    width: 100%;
+  }
 /* change the header  */
 @media screen and (max-width : 747px) {
     header {
         display: none;
         visibility: hidden;
       }
+    .arrow_right{
+        display: block;
+        left: 0;
+    }
 
 }
 
