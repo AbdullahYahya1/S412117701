@@ -15,11 +15,15 @@ function handleScrollTo100vhPlus30px() {
   }
 }
 document.addEventListener('DOMContentLoaded' , function(){
-  gsap.to(".education", {
+  gsap.to(".contMe", {
     opacity: 1,
     duration: 5,
   });
   
+  gsap.to(".massagecontainer", {
+    opacity: 1,
+    duration: 3,
+  });
   gsap.to(".circle", {
     opacity: 1,
     duration: 10,
@@ -88,3 +92,29 @@ document.addEventListener('DOMContentLoaded', function () {
       }
     });
   });
+
+
+  document.addEventListener('DOMContentLoaded', function () {
+    const messageTextarea = document.querySelector('textarea[name="message"]');
+    const submitButton = document.querySelector('input[type="submit"]');
+    const messageWarning = document.createElement('p'); // Create a new <p> element for the message
+    messageWarning.classList.add('popmassage');
+    submitButton.disabled = true;
+  
+    messageTextarea.addEventListener('input', function () {
+      const messageLength = this.value.trim().length;
+      submitButton.disabled = messageLength < 5;
+  
+      // Display or remove warning message
+      if (messageLength < 5) {
+        messageWarning.textContent = 'Please enter a message with at least 5 characters.';
+        submitButton.parentNode.insertBefore(messageWarning, submitButton.nextSibling);
+      } else {
+        // Remove warning message if it exists
+        if (messageWarning.parentNode) {
+          messageWarning.parentNode.removeChild(messageWarning);
+        }
+      }
+    });
+  });
+  

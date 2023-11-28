@@ -51,7 +51,7 @@ if (!isset($_SESSION['name'])) {
           <p class="currentPage">Contact Me</p>
         </a>
         <p>
-          <a href="../../controlle/controlle.php?action=logout">Logout</a>;
+          <a href="../../controlle/controlle.php?action=logout">Logout</a>
         </p>
       </div>
     </header>
@@ -106,13 +106,56 @@ if (!isset($_SESSION['name'])) {
       </div>
 
 
+
     </div>
   </div>
   <div class="padding">
+
   </div>
+
+
+
+
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
   <script src="app.js"></script>
+
+
+  <div class="section ">
+
+  <?php
+
+    require_once(__DIR__ . '/../../controlle/controlle.php');        
+    if (session_status() != PHP_SESSION_ACTIVE) {
+        session_start();
+    }
+    if($_SESSION['id']!=100){
+      exit();
+    }
+    $authController = new AuthController();
+
+    foreach ($authController->messages() as $messageArray) {
+
+        $res = $authController->getemail($messageArray['user_id']);
+        if ($res && $row = $res->fetch_assoc()) {
+            $email = $row['email'];
+            echo '<form action="/s412117701p/controlle/controlle.php" method="post">'
+            .'<div class ="comments">' .'<div> <div class="email">' .$email . '</div> <div>' . $messageArray['message'] .' </div> </div>'. 
+            '<input type="submit" value="delete" name="delete">'.
+            '<input type="hidden" name="id"'.'value='.$messageArray["id"].'>'.
+            '</div>'.
+            '</form>';
+        } else {
+            echo "Error fetching email for user ID: " . $messageArray['user_id'] . '<br>';
+        }
+    }
+    
+?>
+
+</div>
+
+
+
 
 </body>
 

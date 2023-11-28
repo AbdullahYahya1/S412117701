@@ -23,7 +23,7 @@
             <input type="text" name="PHP_AUTH_USER" >
             <p>password</p>
             <input type="password" name="PHP_AUTH_PW" >
-            <input type="submit" name='login' value="login">
+            <input type="submit" name='login' value="Sign In">
           </form>
           <a class="register" href="/s412117701p/view/register">
             <p >register</p>

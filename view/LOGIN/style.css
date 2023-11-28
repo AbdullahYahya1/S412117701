@@ -38,7 +38,6 @@ form [type='text'] , form [type='password']{
   padding-bottom: 5px;
   padding-left: 2px;
   padding-right: 2px;
-  background: #FFFFFF4D;
 
 }
 form [type='submit']{
@@ -64,4 +63,11 @@ input:focus {
 }
 .register:hover{
   color:#b84aca; 
+}
+.popmessage {
+  font-size: 13px !important;
+  color: rgb(153, 0, 0) !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  margin-bottom: 10px !important;
 }

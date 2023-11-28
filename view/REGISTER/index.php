@@ -24,11 +24,11 @@
         <div class="section" >
           <form action="/s412117701p/controlle/controlle.php" method="post">
             <p>name</p>
-            <input type="text" name="PHP_AUTH_USER" placeholder="name">
+            <input type="text" name="PHP_AUTH_USER" required>
             <p>password</p>
-            <input type="password" name="PHP_AUTH_PW" >
+            <input type="password" name="PHP_AUTH_PW" required>
             <p>email</p>
-            <input type="email" name="email">
+            <input type="email" name="email" required>
             <input type="submit" name='register' value="register">
           </form>
           <a href="/s412117701p/view/login">

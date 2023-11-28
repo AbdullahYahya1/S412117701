@@ -46,7 +46,7 @@ if(! isset($_SESSION['name'])){
           <p>Contact Me</p>
           </a>
           <p>
-          <a href="../../controlle/controlle.php?action=logout">Logout</a>;
+          <a href="../../controlle/controlle.php?action=logout">Logout</a>
           </p>
       </div>
       </header>
@@ -54,41 +54,14 @@ if(! isset($_SESSION['name'])){
     <h1 class="porjects">PROJECTS</h1>
 
 
-  <div class="slider-container">
-    <div  class="slide-wrapper">
-      <div class="slide">
-        <div class='rel'>
-          <img src="imgs/Screenshot_91.png" alt="pro1">
-          <a href="https://www.youtube.com/watch?v=3M-atQOJGxM">
-            <p class='projectTitlename'>Commerce: on youtube</p>
-          </a>
-        </div>
-      </div>
-      <div class="slide">
-        <div class='rel'>
-          <img src="imgs/gradebook.png" alt="pro3">
-          <a href="https://www.youtube.com/watch?v=iLwDEVR436Q">
-          <p class='projectTitlename'>gradebook: on youtube</p>
-          </a>
-        </div>
-      </div>
-
-      <div class="slide">
-        <div class='rel'>
-          <img src="imgs/secure.png" alt="pro3">
-          <a href="https://www.youtube.com/watch?v=wrHm-2NWslQ">
-          <p class='projectTitlename'>SecuTask: on youtube</p></a>
-        </div>
-      </div>
-
-      <!-- Add more slides as needed -->
+    <div id="slider-container" class="slider-container">
+    <div id="slide-wrapper" class="slide-wrapper">
+      <!-- Slides will be dynamically added here -->
     </div>
-
     <button class="navigation-btn prev-btn" onclick="prevSlide()">❮</button>
     <button class="navigation-btn next-btn" onclick="nextSlide()">❯</button>
   </div>
-
-
+  
   <div class="padding">
     </div>
 

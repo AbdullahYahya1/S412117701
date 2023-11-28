@@ -73,10 +73,23 @@
     }
     
     public function messages(){
-        $query = "SELECT `user_id`, `message` FROM `message` ORDER BY `date` DESC";
+        $query = "SELECT `user_id`, `id` ,`message` FROM `message` ORDER BY `date` DESC";
         $res=$this->query($query);
         return $res;
     }    
+    public function deleteMessage($id) {
+        $id = mysqli_real_escape_string($this->conn, $id); // Escape input to prevent SQL injection
+    
+        $query = "DELETE FROM `message` WHERE `id` = '$id'";
+        $result = $this->query($query);
+    
+        if (!$result) {
+            return false; // Delete operation failed
+        }
+    
+        return true; // Delete operation successful
+    }
+    
         public function __destruct() {
             mysqli_close($this->conn);
         }

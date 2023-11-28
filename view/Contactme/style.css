@@ -2,7 +2,6 @@
 .massagecontainer{
   background-color: #B84ACA33; 
   color: white;
-  height: 400px;
   padding: 30px;
   min-width: 300px;
   max-width: 700px;
@@ -12,8 +11,10 @@
   border-radius: 10px;
   display: flex;
   flex-direction: row-reverse;
+  opacity: 0;
 }
 .contMe{
+  opacity: 0;
   padding-top: 25px;
   padding-bottom: 25px;
   font-size: 58px;
@@ -30,7 +31,6 @@
 }
 .ms1{
 flex: 1;
-
 }
 .ms2{
   flex: 1;
@@ -103,5 +103,40 @@ flex: 1;
     margin-bottom: 30px;
 
   }
+  .padding{
+    margin-bottom: 600px;
+  }
+}
+.comments{
+  margin-inline:auto;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 7px;
+  font-size: 20px;
+  background-color: #B84ACA33; 
+  color: white;
+  padding: 30px;
+  min-width: 300px;
+  max-width: 700px;
+  box-shadow: 0px 0px 10px rgb(176, 29, 171);
+}
+.comments input[type='submit'] {
+  padding: 10px;
+  background: linear-gradient(95.61deg, #2954A3 -8.54%, #B84ACA 77.53%);
+  border-radius: 7px;
+  border: none;
+}
+.email{
+  font-weight: bold;
+  font-family:Georgia, 'Times New Roman', Times, serif;
+  font-size: 10px;
+  margin-bottom: 5px;
+}
 
+
+.popmassage{
+  font-size: 16px !important;
+  color: rgb(153, 0, 0);
 }

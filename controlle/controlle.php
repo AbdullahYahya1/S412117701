@@ -57,6 +57,7 @@ class AuthController {
             return;
         }
         $res= $this->dbModel->message1($_POST['message']);
+        
         if ($res) {
             header('Location: ../?state=massage%20have%20been%20sent');
         }
@@ -67,8 +68,14 @@ class AuthController {
     public function getemail($id){
         return $this->dbModel->getemail($id);
     }
+    public function deleteMessage(){
+        if (isset( $_POST['id'] )){
+             $this->dbModel->deleteMessage($_POST['id']);
+             header('Location: /s412117701p/view/Contactme/');
+        }
+        
     }
-
+    }
 
 if (isset($_POST['register'])){
     $authController = new AuthController();
@@ -79,7 +86,9 @@ if (isset($_POST['register'])){
 }elseif(isset($_POST['message'])){
     $authController = new AuthController();
     $authController->message();
-    echo($_POST['message']); 
+}elseif(isset($_POST['delete'])){
+    $authController = new AuthController();
+    $authController->deleteMessage();
 }
 
 if (isset($_GET['action'])){

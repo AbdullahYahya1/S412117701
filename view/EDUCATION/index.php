@@ -48,7 +48,7 @@ if (!isset($_SESSION['name'])) {
           <p>Contact Me</p>
         </a>
         <p>
-          <a href="../../controlle/controlle.php?action=logout">Logout</a>;
+          <a href="../../controlle/controlle.php?action=logout">Logout</a>
         </p>
       </div>
     </header>

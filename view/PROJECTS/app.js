@@ -1,35 +1,102 @@
-let currentIndex = 0;
-
-function showSlide(index) {
-  const slideWrapper = document.querySelector('.slide-wrapper');
-  const slideWidth = document.querySelector('.slide').offsetWidth;
-  const newPosition = -index * slideWidth;
-  slideWrapper.style.transform = `translateX(${newPosition}px)`;
-  currentIndex = index;
-}
-
-function nextSlide() {
-  const totalSlides = document.querySelectorAll('.slide').length;
-  currentIndex = (currentIndex + 1) % totalSlides;
-  showSlide(currentIndex);
-}
-function prevSlide() {
-  const totalSlides = document.querySelectorAll('.slide').length;
-  currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
-  showSlide(currentIndex);
-}
-
-nextSlide()
-let interval = setInterval(nextSlide, 3000);
-
-document.querySelectorAll('.navigation-btn').forEach(function(buttonClicked) {
-  buttonClicked.addEventListener('click', function() {
-    setTimeout(() => {
-      clearInterval(interval);
-      interval = setInterval(nextSlide, 3000);
-    }, 500);
-  });
+function proanimaion(){
+gsap.to(".porjects", {
+  opacity:1 ,
+  duration: 3
 });
+
+gsap.to(".prev-btn", {
+  left:'10px' ,
+  opacity:1 ,
+  duration: 0.5
+});
+
+gsap.to(".rel", {
+  right:'10px',
+  opacity:1 ,
+  duration: 1
+});
+
+gsap.to(".next-btn", {
+  right:'10px',
+  opacity:1 ,
+  duration: 0.5
+});
+
+}
+setTimeout(proanimaion,100)
+
+var ourslides = {
+  "Commerce: on youtube 1": ['imgs/Screenshot_91.png', 'https://www.youtube.com/watch?v=3M-atQOJGxM'],
+  "SecuTask: on youtube 1": ['imgs/secure.png', 'https://www.youtube.com/watch?v=wrHm-2NWslQ'],
+  "gradebook: on youtube 1": ['imgs/gradebook.png', 'https://www.youtube.com/watch?v=iLwDEVR436Q'],
+  "Commerce: on youtube 2": ['imgs/Screenshot_91.png', 'https://www.youtube.com/watch?v=3M-atQOJGxM'],
+  "SecuTask: on youtube 2": ['imgs/secure.png', 'https://www.youtube.com/watch?v=wrHm-2NWslQ'],
+  "gradebook: on youtube 2": ['imgs/gradebook.png', 'https://www.youtube.com/watch?v=iLwDEVR436Q'],
+  "Commerce: on youtube 3": ['imgs/Screenshot_91.png', 'https://www.youtube.com/watch?v=3M-atQOJGxM'],
+  "SecuTask: on youtube 3": ['imgs/secure.png', 'https://www.youtube.com/watch?v=wrHm-2NWslQ'],
+  "gradebook: on youtube 3": ['imgs/gradebook.png', 'https://www.youtube.com/watch?v=iLwDEVR436Q']
+};
+
+
+var slideWrapper = document.getElementById('slide-wrapper');
+
+// Dynamically generate slides
+Object.keys(ourslides).forEach(function (key) {
+  var slide = document.createElement('div');
+  slide.className = 'slide';
+
+  var relDiv = document.createElement('div');
+  relDiv.className = 'rel';
+
+  var img = document.createElement('img');
+  img.src = ourslides[key][0];
+  img.alt = key;
+
+  var link = document.createElement('a');
+  link.href = ourslides[key][1];
+
+  var projectName = document.createElement('p');
+  projectName.className = 'projectTitlename';
+  projectName.textContent = key;
+
+  link.appendChild(projectName);
+  relDiv.appendChild(img);
+  relDiv.appendChild(link);
+  slide.appendChild(relDiv);
+
+  slideWrapper.appendChild(slide);
+});
+
+// JavaScript functions for slider navigation
+var currentIndex = 0;
+var totalSlides = Object.keys(ourslides).length;
+
+function prevSlide() {
+  if (currentIndex > 0) {
+    currentIndex--;
+    updateSlider();
+  }  else{
+    currentIndex=Object.keys(ourslides).length-1;
+    updateSlider();
+  }
+}
+function nextSlide() {
+  if (currentIndex < totalSlides - 1) {
+    currentIndex++;
+    updateSlider();
+  } else {
+    
+    currentIndex = 0; // If at the last slide, go back to the first slide
+    updateSlider();
+  }
+}
+
+function updateSlider() {
+  var translateValue = -currentIndex * 100 + '%';
+  slideWrapper.style.transform = 'translateX(' + translateValue + ')';
+}
+
+
 
 
 if ('maxTouchPoints' in navigator && navigator.maxTouchPoints === 0) {
@@ -43,6 +110,22 @@ if ('maxTouchPoints' in navigator && navigator.maxTouchPoints === 0) {
   });
   setTimeout('light.style.opacity=1; ', 500)
 
+}
+var numberOfCopies = 10; // Adjust the number of copies as needed
+function duplicateSlides(originalSlides, numberOfCopies) {
+  var duplicatedSlides = {};
+
+  for (var i = 1; i <= numberOfCopies; i++) {
+    Object.keys(originalSlides).forEach(function (key) {
+      var newKey = key.replace(/(\d+)/, function (match, p1) {
+        return match.replace(p1, Number(p1) + i);
+      });
+
+      duplicatedSlides[newKey] = originalSlides[key].slice();
+    });
+  }
+
+  return duplicatedSlides;
 }
 
 // gsap.to('.section2img',{
@@ -60,6 +143,8 @@ if ('maxTouchPoints' in navigator && navigator.maxTouchPoints === 0) {
 //     backgroundColor:'white',
 
 // })
+
+
 function left_barshow(s) {
   if (s){
   gsap.to(".left_bar", {
