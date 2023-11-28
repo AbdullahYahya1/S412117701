@@ -13,6 +13,8 @@ if(! isset($_SESSION['name'])){
     <link rel="stylesheet" href="/s412117701p/style.css" />
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 
     <title>Education</title>
   </head>
@@ -46,7 +48,7 @@ if(! isset($_SESSION['name'])){
           <p>Contact Me</p>
           </a>
           <p>
-          <a href="../../controlle/controlle.php?action=logout">Logout</a>
+          <a href="../../controlle/controlle.php?action=logout">Logout</a>;
           </p>
       </div>
       </header>
@@ -57,17 +59,14 @@ if(! isset($_SESSION['name'])){
     <div id="slider-container" class="slider-container">
     <div id="slide-wrapper" class="slide-wrapper">
       <!-- Slides will be dynamically added here -->
+
     </div>
-    <button class="navigation-btn prev-btn" onclick="prevSlide()">❮</button>
-    <button class="navigation-btn next-btn" onclick="nextSlide()">❯</button>
   </div>
   
   <div class="padding">
     </div>
 
   </div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
     <script src="app.js"></script>
     
   </body>

@@ -2,12 +2,13 @@
   padding-top: 30px;
   padding-bottom: 30px;
   font-size: 58px;
-  opacity: 0;
   text-align: center;
   color: #b84aca;
+  opacity: 0;
 }
 
 .slider-container {
+  
   width: 80%;
   margin: auto;
   overflow: hidden;
@@ -37,7 +38,6 @@
   border-radius: 10px !important;
   width: 100%;
   height: auto;
-
   overflow: hidden;
 }
 
@@ -70,8 +70,9 @@
   background-color: transparent;
   border: none;
   outline: none;
-  background-color: #b84aca;
   border-radius: 50%;
+  box-shadow: 0px 0px 15px #b84aca;
+  background-color: rgba(0, 0, 0, 0.341);
   width: 4vw;
   height: 4vw;
   display: flex;
@@ -79,19 +80,16 @@
   align-items: center;
   text-align: center;
   line-height: 1;
+  z-index: 1;
   color: white; /* Added to ensure button text is visible on the background */
-  opacity: 0;  
 }
 
 .prev-btn {
-  z-index: 10;
-  left: -100px;
+  left: -1000px ;
 }
 
 .next-btn {
-  z-index: 10;
-
-  right: -100px;
+  right:  -1000px ;
 }
 
 @media screen and (max-width: 832px) {

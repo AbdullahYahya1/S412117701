@@ -1,29 +1,4 @@
-function proanimaion(){
-gsap.to(".porjects", {
-  opacity:1 ,
-  duration: 3
-});
 
-gsap.to(".prev-btn", {
-  left:'10px' ,
-  opacity:1 ,
-  duration: 0.5
-});
-
-gsap.to(".rel", {
-  right:'10px',
-  opacity:1 ,
-  duration: 1
-});
-
-gsap.to(".next-btn", {
-  right:'10px',
-  opacity:1 ,
-  duration: 0.5
-});
-
-}
-setTimeout(proanimaion,100)
 
 var ourslides = {
   "Commerce: on youtube 1": ['imgs/Screenshot_91.png', 'https://www.youtube.com/watch?v=3M-atQOJGxM'],
@@ -62,6 +37,7 @@ Object.keys(ourslides).forEach(function (key) {
   link.appendChild(projectName);
   relDiv.appendChild(img);
   relDiv.appendChild(link);
+  relDiv.innerHTML+='      <button class="navigation-btn prev-btn" onclick="prevSlide()">❮</button> <button class="navigation-btn next-btn" onclick="nextSlide()">❯</button> '
   slide.appendChild(relDiv);
 
   slideWrapper.appendChild(slide);
@@ -73,30 +49,68 @@ var totalSlides = Object.keys(ourslides).length;
 
 function prevSlide() {
   if (currentIndex > 0) {
+    gsap.to(".slide", {
+      opacity: 0,
+      duration: 1
+    });
     currentIndex--;
-    updateSlider();
-  }  else{
-    currentIndex=Object.keys(ourslides).length-1;
-    updateSlider();
+  } else {
+    gsap.to(".slide", {
+      opacity: 0,
+      duration: 1
+    });
+    currentIndex = Object.keys(ourslides).length - 1;
   }
+
+  clearInterval(intervalId); // Clear any existing interval
+
+  intervalId = setInterval(() => {
+    updateSlider();
+    gsap.to(".slide", {
+      opacity: 1,
+      duration: 1
+    });
+  }, 1000);
 }
+
 function nextSlide() {
   if (currentIndex < totalSlides - 1) {
+    gsap.to(".slide", {
+      opacity: 0,
+      duration: 1
+    });
     currentIndex++;
-    updateSlider();
   } else {
-    
-    currentIndex = 0; // If at the last slide, go back to the first slide
-    updateSlider();
+    gsap.to(".slide", {
+      opacity: 0,
+      duration: 1
+    });
+    currentIndex = 0;
   }
+  clearInterval(intervalId);
+  intervalId = setInterval(() => {
+    updateSlider();
+    gsap.to(".slide", {
+      opacity: 1,
+      duration: 1
+    });
+  }, 1000);
 }
+
+var intervalId;
+
 
 function updateSlider() {
-  var translateValue = -currentIndex * 100 + '%';
-  slideWrapper.style.transform = 'translateX(' + translateValue + ')';
+  var slides = document.querySelectorAll('.slide');
+  slides.forEach(function (slide, index) {
+    if (index === currentIndex) {
+      slide.style.display = 'flex'; 
+    } else {
+      slide.style.display = 'none';
+    }
+  });
 }
-
-
+updateSlider()
 
 
 if ('maxTouchPoints' in navigator && navigator.maxTouchPoints === 0) {
@@ -111,7 +125,7 @@ if ('maxTouchPoints' in navigator && navigator.maxTouchPoints === 0) {
   setTimeout('light.style.opacity=1; ', 500)
 
 }
-var numberOfCopies = 10; // Adjust the number of copies as needed
+var numberOfCopies = 10; 
 function duplicateSlides(originalSlides, numberOfCopies) {
   var duplicatedSlides = {};
 
@@ -127,23 +141,6 @@ function duplicateSlides(originalSlides, numberOfCopies) {
 
   return duplicatedSlides;
 }
-
-// gsap.to('.section2img',{
-//     opacity:1,
-//     duration:3,
-//     scrollTrigger:'.education',
-//     backgroundColor:'#B84ACA',
-
-// })
-
-// gsap.to('.section2img',{
-//     opacity:1,
-//     duration:3,
-//     scrollTrigger:'.sectionSep',
-//     backgroundColor:'white',
-
-// })
-
 
 function left_barshow(s) {
   if (s){
@@ -178,3 +175,29 @@ document.addEventListener('DOMContentLoaded', function () {
       }
     });
   });
+  function proanimaion(){
+    gsap.to(".porjects", {
+      opacity:1 ,
+      duration: 3
+    });
+  
+    gsap.to(".prev-btn", {
+    left:'10px',
+    
+      opacity:1 ,
+      duration: 1
+    });
+  
+    gsap.to(".rel", {
+      opacity:1 ,
+      duration: 1
+    });
+  
+    gsap.to(".next-btn", {
+      right:'10px',
+      opacity:1 ,
+      duration: 1
+    });
+  
+  }
+  setTimeout(proanimaion,1000)
