@@ -72,7 +72,7 @@ class AuthController {
     public function deleteMessage(){
         if (isset( $_POST['id'] )){
              $this->dbModel->deleteMessage($_POST['id']);
-             header('Location: /s412117701p/view/Contactme/');
+             header('Location: /s412117701/view/Contactme/');
         }
         
     }

@@ -1,13 +1,11 @@
-
-
 var ourslides = {
+  "My new personal website: on youtube ": ['imgs/Screenshot_112.png', 'https://www.youtube.com/watch?v=V696U6FcHWU'],
   "cs 50 for web Commerce: on youtube ": ['imgs/Screenshot_91.png', 'https://www.youtube.com/watch?v=3M-atQOJGxM'],
-  "cs 50 for web email: on youtube ": ['imgs/email.png', 'https://www.youtube.com/watch?v=Ij3cDmCihDw'],
+  "cs 50 for web WIKI: on youtube ": ['imgs/email.png', 'https://www.youtube.com/watch?v=tuEwGzN64Kk'],
   "cs 50 for web gradebook: on youtube ": ['imgs/gradebook.png', 'https://www.youtube.com/watch?v=iLwDEVR436Q'],
   "cs 50 for python SecuTask: on youtube ": ['imgs/secure.png', 'https://youtu.be/WFpUiIrkbJs'],
-
+  "CS50 for web email: on youtube ": ['imgs/email2.png', 'https://www.youtube.com/watch?v=Ij3cDmCihDw'],
 };
-
 
 var slideWrapper = document.getElementById('slide-wrapper');
 

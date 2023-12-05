@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/s412117701p/style.css" />
+    <link rel="stylesheet" href="/s412117701/style.css" />
     <link rel="stylesheet" href="style.css" />
     <title>Education</title>
   </head>
@@ -18,14 +18,14 @@
           Sign In
         </h1>
         <div class="section" >
-          <form action="/s412117701p/controlle/controlle.php" method="post">
+          <form action="/s412117701/controlle/controlle.php" method="post">
             <p>name</p>
             <input type="text" name="PHP_AUTH_USER" >
             <p>password</p>
             <input type="password" name="PHP_AUTH_PW" >
             <input type="submit" name='login' value="Sign In">
           </form>
-          <a class="register" href="/s412117701p/view/register">
+          <a class="register" href="/s412117701/view/register">
             <p >register</p>
           </a>
         </div>

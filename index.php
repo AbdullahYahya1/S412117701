@@ -88,11 +88,6 @@ if(! isset($_SESSION['name'])){
                     I am intersted in solving any kind of problems
                     & I like learning new Stuff   
                 </p>
-                
-                <div class="buttons_div">
-                    <button> share Prtfolio</button>
-                    <button> Download CV</button>
-                </div>
             </div>
         </div>
 

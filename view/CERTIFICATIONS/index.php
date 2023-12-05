@@ -11,7 +11,7 @@ if (!isset($_SESSION['name'])) {
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="/s412117701p/style.css" />
+  <link rel="stylesheet" href="/s412117701/style.css" />
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
     integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
@@ -34,7 +34,7 @@ if (!isset($_SESSION['name'])) {
                     <span>A</span><span>b</span><span>d</span><span>u</span><span>l</span><span>l</span><span>a</span><span>h</span>
                 </h4>
 
-        <a href="/s412117701p">
+        <a href="/s412117701">
           <p>About Me</p>
         </a>
         <a href="../../view/EDUCATION/">
