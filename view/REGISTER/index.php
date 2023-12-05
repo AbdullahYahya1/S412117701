@@ -1,7 +1,3 @@
-
-
-
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -12,16 +8,28 @@
     <title>Education</title>
   </head>
   <body>
-  <div id="light"></div>
+  <div class="imgContainer">
+    <img class="imgAbslute" src="imgs/img.png" alt="Image">
+  </div>
+  <div id='light'></div>
+      <?php 
 
-    <!-- <div class="circle circle1"></div>
-    <div class="circle circle2"></div> -->
+      if(isset($_GET['error'])){
+          echo'<div class="mycontainer">
+          <div class="X">
+              x
+          </div>'.
+          'The name or email already has an account'.
+          '</div>';
+      }
+      ?>
+    
     <div class="Maincontainer">
       <div class="x">
         <h1 class="s1">
           Sign Up
         </h1>
-        <div class="section" >
+        <div class="section">
           <form action="/s412117701p/controlle/controlle.php" method="post">
             <p>name</p>
             <input type="text" name="PHP_AUTH_USER" required>
@@ -36,17 +44,14 @@
           </a>
           <?php
           if (isset($_GET['stat'])){
-            echo 'somthing went wrong try again or register';
+            echo 'something went wrong, try again or register';
           }
           ?>
         </div>
-
-    </div>
-
+      </div>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
     <script src="app.js"></script>
-    
   </body>
 </html>

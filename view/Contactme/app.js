@@ -19,15 +19,16 @@ document.addEventListener('DOMContentLoaded' , function(){
     opacity: 1,
     duration: 5,
   });
-  
-  gsap.to(".massagecontainer", {
-    opacity: 1,
-    duration: 3,
-  });
   gsap.to(".circle", {
     opacity: 1,
-    duration: 10,
+    duration: 7,
   });
+  setTimeout(()=>{
+    gsap.to(".massagecontainer", {
+      opacity: 1,
+      duration: 3,
+    });
+  },1000)
 
 })
 
@@ -43,7 +44,17 @@ if ('maxTouchPoints' in navigator && navigator.maxTouchPoints === 0) {
   setTimeout('light.style.opacity=1; ', 500)
 
 }
-
+const spans = document.querySelectorAll("#animatedText span");
+gsap.to(spans, {
+  duration: 0.5,
+  color: "#B84ACA",
+  stagger: {
+    each: 1,
+    from: "start",
+  },
+  yoyo: true,
+  ease: "linear",
+});
 // gsap.to('.section2img',{
 //     opacity:1,
 //     duration:3,
@@ -96,19 +107,19 @@ document.addEventListener('DOMContentLoaded', function () {
 
   document.addEventListener('DOMContentLoaded', function () {
     const messageTextarea = document.querySelector('textarea[name="message"]');
-    const submitButton = document.querySelector('input[type="submit"]');
+    const checkboxButton = document.querySelector('input[type="checkbox"]');
     const messageWarning = document.createElement('p'); // Create a new <p> element for the message
     messageWarning.classList.add('popmassage');
-    submitButton.disabled = true;
+    checkboxButton.disabled = true;
   
     messageTextarea.addEventListener('input', function () {
       const messageLength = this.value.trim().length;
-      submitButton.disabled = messageLength < 5;
+      checkboxButton.disabled = messageLength < 5;
   
       // Display or remove warning message
       if (messageLength < 5) {
         messageWarning.textContent = 'Please enter a message with at least 5 characters.';
-        submitButton.parentNode.insertBefore(messageWarning, submitButton.nextSibling);
+        checkboxButton.parentNode.insertBefore(messageWarning, checkboxButton.nextSibling);
       } else {
         // Remove warning message if it exists
         if (messageWarning.parentNode) {

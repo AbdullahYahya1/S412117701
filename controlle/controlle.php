@@ -53,14 +53,15 @@ class AuthController {
         if(!isset( $_POST['message'])){
             return; 
         }
+        $setOrNot=0;
+        if(isset($_POST['showit'])){
+            $setOrNot=1; 
+        }
         if (!$this->dbModel->isconnected) {
             return;
         }
-        $res= $this->dbModel->message1($_POST['message']);
-        
-        if ($res) {
-            header('Location: ../?state=massage%20have%20been%20sent');
-        }
+        $this->dbModel->message1($_POST['message'],$setOrNot );
+        header('Location: ../?state=massage%20have%20been%20sent');
         }
     public function messages() {
         return $this->dbModel->messages();

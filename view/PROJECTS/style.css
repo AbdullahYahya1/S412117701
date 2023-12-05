@@ -59,8 +59,8 @@
   text-align: center;
   text-decoration:none;
   color: white; 
+  transition: all 0.5s;
 }
-
 .navigation-btn {
   position: absolute;
   top: 50%;
@@ -83,7 +83,9 @@
   z-index: 1;
   color: white; /* Added to ensure button text is visible on the background */
 }
-
+.navigation-btn :hover{
+  background-color: #000;
+}
 .prev-btn {
   left: -1000px ;
 }
@@ -105,3 +107,32 @@
     overflow: hidden;
   }
 }
+.mycontainer div{
+  position: absolute;
+  top: -5px;
+  right: 5px;
+  font-size: 30px;
+  color: #000;
+  cursor: pointer;
+  
+  transition:all 0.5s  ;
+}
+.mycontainer div:hover{
+  color: #B84ACA;
+}
+.mycontainer div:active{
+  opacity: 0.6;
+}
+.mycontainer{
+  opacity: 0;
+  background-color: #bc48cecf;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  width: 30vw;    
+  padding: 40px;
+  font-size: large;
+  font-weight: bolder;
+}
+.projectTitlename:hover{opacity: 0.6;}

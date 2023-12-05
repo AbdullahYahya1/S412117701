@@ -19,6 +19,9 @@ if(! isset($_SESSION['name'])){
     <title>Education</title>
   </head>
   <body>
+  <div class="circle circle1"></div>
+  <div class="circle circle2"></div>
+
   <div id="light"></div>
 
     <?php 
@@ -30,8 +33,9 @@ if(! isset($_SESSION['name'])){
     <div class="Maincontainer">
       <header id="header">
         <div class="container">
-          <h4>Abdullah</h4>
-
+        <h4 id="animatedText">
+                    <span>A</span><span>b</span><span>d</span><span>u</span><span>l</span><span>l</span><span>a</span><span>h</span>
+                </h4>
           <a href="/s412117701p">
             <p>About Me</p>
           </a>

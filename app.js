@@ -92,22 +92,18 @@ document.addEventListener('DOMContentLoaded', function (event) {
 
 });
 
-// gsap.to('.section2img',{
-//     opacity:1,
-//     duration:3,
-//     scrollTrigger:'.education',
-//     backgroundColor:'#B84ACA',
+const spans = document.querySelectorAll("#animatedText span");
 
-// })
-
-// gsap.to('.section2img',{
-//     opacity:1,
-//     duration:3,
-//     scrollTrigger:'.sectionSep',
-//     backgroundColor:'white',
-
-// })
-
+gsap.to(spans, {
+  duration: 0.5,
+  color: "#B84ACA",
+  stagger: {
+    each: 1,
+    from: "start",
+  },
+  yoyo: true,
+  ease: "linear",
+});
 
 
 if ('maxTouchPoints' in navigator && navigator.maxTouchPoints === 0) {

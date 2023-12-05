@@ -86,3 +86,30 @@ if ('maxTouchPoints' in navigator && navigator.maxTouchPoints === 0) {
     passwordInput.addEventListener('input', validateForm);
   });
   
+  gsap.to(".imgAbslute", {
+    rotation: 360,
+    transformOrigin: "center center",
+    duration: 80*8,
+    scale: 1.1,
+    repeat: -1,
+    ease: "linear",
+    stagger: 0.5 // Add stagger for a delay between each image
+  });
+
+var clicked = false
+document.addEventListener('DOMContentLoaded', function (event) {
+  let c = document.querySelector('.X');
+  if (c) {
+    c.addEventListener('click', () => {
+      console.time('Click Event Processing Time');
+      document.querySelector('.mycontainer').style.display = 'none';
+      var newUrl = window.location.href.split('?')[0];
+      history.replaceState({}, document.title, newUrl);
+      console.timeEnd('Click Event Processing Time');
+    });
+  
+    console.log('Click event listener added to element with class "X".');
+  } else {
+    console.error('Element with class "X" not found.');
+  }
+});

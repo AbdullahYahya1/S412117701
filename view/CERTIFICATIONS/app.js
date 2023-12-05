@@ -54,7 +54,17 @@ gsap.to('.left4',{
 }
 )
 
-
+const spans = document.querySelectorAll("#animatedText span");
+gsap.to(spans, {
+  duration: 0.5,
+  color: "#B84ACA",
+  stagger: {
+    each: 1,
+    from: "start",
+  },
+  yoyo: true,
+  ease: "linear",
+});
 // gsap.to('.circle',{
 //     opacity:1, 
 //     duration:10,

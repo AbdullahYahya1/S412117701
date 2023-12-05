@@ -33,7 +33,9 @@ if (!isset($_SESSION['name'])) {
   <div class="Maincontainer">
     <header id="header">
       <div class="container">
-        <h4>Abdullah</h4>
+      <h4 id="animatedText">
+                    <span>A</span><span>b</span><span>d</span><span>u</span><span>l</span><span>l</span><span>a</span><span>h</span>
+                </h4>
 
         <a href="/s412117701p">
           <p>About Me</p>
@@ -64,7 +66,13 @@ if (!isset($_SESSION['name'])) {
           <form class="formMessage" action="/s412117701p/controlle/controlle.php" method="post">
             <p>Send me a message</p>
             <textarea name="message" required></textarea>
+            <div>
             <input type="submit" value="Send message">
+            <label class='public'>
+              public?
+              <input class='showit' type="checkbox" name="showit">
+            </label>
+            </div>
           </form>
         </div>
         <div class='ms2'>
@@ -90,7 +98,7 @@ if (!isset($_SESSION['name'])) {
             </a>
           </div>
           <div>
-            <a href="linkedin.com/in/abdullah-yahya-6a371027a">
+            <a href="https://linkedin.com/in/abdullah-yahya-6a371027a">
 
               <i class="fa-brands fa-linkedin fa-2xl"></i>
               @abdullah-yahya-6a371027a
@@ -106,14 +114,48 @@ if (!isset($_SESSION['name'])) {
       </div>
 
 
+      <?php
 
+require_once(__DIR__ . '/../../controlle/controlle.php');        
+if (session_status() != PHP_SESSION_ACTIVE) {
+    session_start();
+}
+if($_SESSION['id']==1){
+$authController = new AuthController();
+foreach ($authController->messages() as $messageArray) {
+    $res = $authController->getemail($messageArray['user_id']);
+    if ($res && $row = $res->fetch_assoc()) {
+        $email = $row['email'];
+        echo '<form action="/s412117701p/controlle/controlle.php" method="post">'
+        .'<div class ="comments">' .'<div> <div class="email">' .$email . '</div> <div>' . $messageArray['message'] .' </div> </div>'. 
+        '<input type="submit" value="delete" name="delete">'.
+        '<input type="hidden" name="id"'.'value='.$messageArray["id"].'>'.
+        '</div>'.
+        '</form>';
+    } else {
+        echo "Error fetching email for user ID: " . $messageArray['user_id'] . '<br>';
+    }
+}
+}else{
+$authController = new AuthController();
+foreach ($authController->messages() as $messageArray) {
+    $res = $authController->getemail($messageArray['user_id']);
+    if (($res && $row = $res->fetch_assoc())&& $messageArray['public']) {
+        echo '<form action="/s412117701p/controlle/controlle.php" method="post">'
+        .'<div class ="comments">' .'<div><div>' . $messageArray['message'] .' </div> </div>'. 
+        '<input type="hidden" name="id"'.'value='.$messageArray["id"].'>'.
+        '</div>'.
+        '</form>';
+    }
+}
+}
+?>
     </div>
+
+
+    
   </div>
-  <div class="padding">
-
-  </div>
-
-
+ 
 
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
@@ -121,38 +163,9 @@ if (!isset($_SESSION['name'])) {
   <script src="app.js"></script>
 
 
-  <div class="section ">
 
-  <?php
+ 
 
-    require_once(__DIR__ . '/../../controlle/controlle.php');        
-    if (session_status() != PHP_SESSION_ACTIVE) {
-        session_start();
-    }
-    if($_SESSION['id']!=100){
-      exit();
-    }
-    $authController = new AuthController();
-
-    foreach ($authController->messages() as $messageArray) {
-
-        $res = $authController->getemail($messageArray['user_id']);
-        if ($res && $row = $res->fetch_assoc()) {
-            $email = $row['email'];
-            echo '<form action="/s412117701p/controlle/controlle.php" method="post">'
-            .'<div class ="comments">' .'<div> <div class="email">' .$email . '</div> <div>' . $messageArray['message'] .' </div> </div>'. 
-            '<input type="submit" value="delete" name="delete">'.
-            '<input type="hidden" name="id"'.'value='.$messageArray["id"].'>'.
-            '</div>'.
-            '</form>';
-        } else {
-            echo "Error fetching email for user ID: " . $messageArray['user_id'] . '<br>';
-        }
-    }
-    
-?>
-
-</div>
 
 
 

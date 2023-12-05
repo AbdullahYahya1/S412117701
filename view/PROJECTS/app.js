@@ -1,15 +1,11 @@
 
 
 var ourslides = {
-  "Commerce: on youtube 1": ['imgs/Screenshot_91.png', 'https://www.youtube.com/watch?v=3M-atQOJGxM'],
-  "SecuTask: on youtube 1": ['imgs/secure.png', 'https://www.youtube.com/watch?v=wrHm-2NWslQ'],
-  "gradebook: on youtube 1": ['imgs/gradebook.png', 'https://www.youtube.com/watch?v=iLwDEVR436Q'],
-  "Commerce: on youtube 2": ['imgs/Screenshot_91.png', 'https://www.youtube.com/watch?v=3M-atQOJGxM'],
-  "SecuTask: on youtube 2": ['imgs/secure.png', 'https://www.youtube.com/watch?v=wrHm-2NWslQ'],
-  "gradebook: on youtube 2": ['imgs/gradebook.png', 'https://www.youtube.com/watch?v=iLwDEVR436Q'],
-  "Commerce: on youtube 3": ['imgs/Screenshot_91.png', 'https://www.youtube.com/watch?v=3M-atQOJGxM'],
-  "SecuTask: on youtube 3": ['imgs/secure.png', 'https://www.youtube.com/watch?v=wrHm-2NWslQ'],
-  "gradebook: on youtube 3": ['imgs/gradebook.png', 'https://www.youtube.com/watch?v=iLwDEVR436Q']
+  "cs 50 for web Commerce: on youtube ": ['imgs/Screenshot_91.png', 'https://www.youtube.com/watch?v=3M-atQOJGxM'],
+  "cs 50 for web email: on youtube ": ['imgs/email.png', 'https://www.youtube.com/watch?v=Ij3cDmCihDw'],
+  "cs 50 for web gradebook: on youtube ": ['imgs/gradebook.png', 'https://www.youtube.com/watch?v=iLwDEVR436Q'],
+  "cs 50 for python SecuTask: on youtube ": ['imgs/secure.png', 'https://youtu.be/WFpUiIrkbJs'],
+
 };
 
 
@@ -181,23 +177,43 @@ document.addEventListener('DOMContentLoaded', function () {
       duration: 3
     });
   
-    gsap.to(".prev-btn", {
-    left:'10px',
+
+    setTimeout(()=>{
+      gsap.to(".rel", {
+        opacity:1 ,
+        duration: 1
+      });
     
-      opacity:1 ,
-      duration: 1
-    });
-  
-    gsap.to(".rel", {
-      opacity:1 ,
-      duration: 1
-    });
-  
-    gsap.to(".next-btn", {
-      right:'10px',
-      opacity:1 ,
-      duration: 1
-    });
-  
+      gsap.to(".next-btn", {
+        right:'10px',
+        opacity:1 ,
+        duration: 2
+      });
+      gsap.to(".prev-btn", {
+        left:'10px',
+        
+          opacity:1 ,
+          duration: 2
+        });
+    },1000)
   }
+  gsap.to(".circle", {
+    opacity: 1,
+    duration: 6,
+    yoyo: true,
+    repeat: -1
+  });
   setTimeout(proanimaion,1000)
+
+
+const spans = document.querySelectorAll("#animatedText span");
+gsap.to(spans, {
+  duration: 0.5,
+  color: "#B84ACA",
+  stagger: {
+    each: 1,
+    from: "start",
+  },
+  yoyo: true,
+  ease: "linear",
+});

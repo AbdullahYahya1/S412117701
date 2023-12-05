@@ -28,16 +28,23 @@
           <a class="register" href="/s412117701p/view/register">
             <p >register</p>
           </a>
-          <?php
-          if (isset($_GET['stat'])){
-            echo 'somthing went wrong try again or register';
-          }
-          ?>
         </div>
-
     </div>
 
     </div>
+    <?php 
+    if(isset($_GET['stat'])){
+        echo'<div class="mycontainer">
+        <div class="X">
+            x
+        </div>'.
+        'somthing went wrong try again or register'.
+        '</div>';
+    }
+    ?>
+    <div class="imgContainer">
+    <img class="imgAbslute" src="imgs/img.png" alt="Image">
+  </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
     <script src="app.js"></script>

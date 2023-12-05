@@ -1,8 +1,13 @@
 
 
 
+
 .Maincontainer{
-  background-color: #B84ACA33; 
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  background-color: #370b3e; 
   color: white;
   padding: 30px;
   min-width: 300px;
@@ -63,4 +68,31 @@ transition: all .5s ;
 }
 .register:hover{
 color:#b84aca; 
+}
+
+.popmessage {
+  font-size: 13px !important;
+  color: rgb(153, 0, 0) !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  margin-bottom: 10px !important;
+}
+
+.imgAbslute {
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  width: 1200px;
+  z-index: -1;
+}
+.imgContainer {
+  z-index: -1;
+  
+  top: 0;
+  height: 100vh;
+  position: absolute;
+  width: 100vw;
+  overflow: hidden;
+  margin: auto;
 }

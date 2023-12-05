@@ -24,9 +24,19 @@ if ('maxTouchPoints' in navigator && navigator.maxTouchPoints === 0) {
       const y = e.clientY - 55;
       light.style.transform = `translate(${x}px, ${y}px)`;
     });
+  const spans = document.querySelectorAll("#animatedText span");
+  gsap.to(spans, {
+    duration: 0.5,
+    color: "#B84ACA",
+    stagger: {
+      each: 1,
+      from: "start",
+    },
+    yoyo: true,
+    ease: "linear",
+  });
   });
   setTimeout('light.style.opacity=1; ', 500)
-
 }
 
 

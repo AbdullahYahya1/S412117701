@@ -37,8 +37,8 @@ if(! isset($_SESSION['name'])){
 
         <header id='header'>
             <div class="container">
-                <h4>
-                    Abdullah
+                <h4 id="animatedText">
+                    <span>A</span><span>b</span><span>d</span><span>u</span><span>l</span><span>l</span><span>a</span><span>h</span>
                 </h4>
                 <a href="">
                     <p class="currentPage">
@@ -88,7 +88,7 @@ if(! isset($_SESSION['name'])){
                     I am intersted in solving any kind of problems
                     & I like learning new Stuff   
                 </p>
-
+                
                 <div class="buttons_div">
                     <button> share Prtfolio</button>
                     <button> Download CV</button>

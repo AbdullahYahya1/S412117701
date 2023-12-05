@@ -240,8 +240,7 @@ header p:active{
     opacity: 0.6;
 }
 .mycontainer{
-    opacity: 0;
-
+    z-index: 100;
     background-color: #bc48cecf;
     position: fixed;
     top: 50%;
@@ -256,7 +255,10 @@ header p:active{
     height: 100px;
     width: 100%;
   }
-/* change the header  */
+#animatedText{
+    font-size: 23px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
 @media screen and (max-width : 747px) {
     header {
         display: none;
@@ -302,8 +304,6 @@ header p:active{
         left: -100px;
     }
     .img1{
-        top: 10px;
-        right: 1px;
         width: 100px;
         overflow: hidden;
     }
