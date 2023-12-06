@@ -107,7 +107,9 @@ flex: 1;
 }
 
 
-
+.commentsContainer{
+  opacity:0;
+}
 @media screen and (max-width : 747px) {
   .massagecontainer {
     flex-direction: column;

@@ -23,10 +23,15 @@ document.addEventListener('DOMContentLoaded' , function(){
     opacity: 1,
     duration: 7,
   });
+
   setTimeout(()=>{
     gsap.to(".massagecontainer", {
       opacity: 1,
       duration: 3,
+    });
+    gsap.to(".commentsContainer", {
+      opacity: 1,
+      duration: 4,
     });
   },1000)
 
@@ -55,6 +60,7 @@ gsap.to(spans, {
   yoyo: true,
   ease: "linear",
 });
+
 // gsap.to('.section2img',{
 //     opacity:1,
 //     duration:3,

@@ -113,7 +113,7 @@ if (!isset($_SESSION['name'])) {
         </div>
       </div>
 
-
+<div class='commentsContainer'>
       <?php
 
 require_once(__DIR__ . '/../../controlle/controlle.php');        
@@ -150,6 +150,8 @@ foreach ($authController->messages() as $messageArray) {
 }
 }
 ?>
+</div>
+
     </div>
 
 
