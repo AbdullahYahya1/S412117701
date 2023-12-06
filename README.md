@@ -2,7 +2,6 @@
 
 ## Project Overview
 This PHP/JavaScript project is aimed at creating an aesthetically pleasing personal website. The architecture follows the MVC (Model-View-Controller) patbvb
-
 ## Project Goals and Reflection
 ### Why this project?
 - The project serves as my inaugural venture into PHP development.
