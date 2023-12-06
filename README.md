@@ -1,7 +1,7 @@
 # Personal Website Project
 
 ## Project Overview
-This PHP/JavaScript project is aimed at creating an aesthetically pleasing personal website. The architecture follows the MVC (Model-View-Controller) pattern for better organization and scalability.
+This PHP/JavaScript project is aimed at creating an aesthetically pleasing personal website. The architecture follows the MVC (Model-View-Controller) patbvb
 
 ## Project Goals and Reflection
 ### Why this project?
