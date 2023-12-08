@@ -73,5 +73,9 @@ if(! isset($_SESSION['name'])){
   </div>
     <script src="app.js"></script>
     
+    <?php 
+        require_once('../../addionals/footer.html');
+    ?>
+
   </body>
 </html>

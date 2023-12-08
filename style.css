@@ -294,7 +294,7 @@ header p:active{
     }
 
     .circle1{
-        top: 450px;
+        top: 450px;    
         right: 1px;
         width: 40px;
 
@@ -327,3 +327,13 @@ header p:active{
         font-size: 14px;
     }
   }
+
+  footer {
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: relative;
+    bottom: 0;
+    opacity: 0;
+   margin-inline:auto;
+}
